@@ -40,13 +40,15 @@ const SJSIceTeam = () => (
                 into 4 services: Front-facing application, an automated emailing
                 microservice, an image content delivery microservice, and a
                 database backup script. The main application utilizes NextJS for
-                SEO.
+                SEO, while the microservices utilize NodeJS with ExpressJS.
               </SubTitle>
               <DetailHeadline>Tech Specs:</DetailHeadline>
               <ul>
                 <li>MongoDB</li>
+                <li>ExpressJS</li>
                 <li>ReactJS (w/ReduxJS)</li>
                 <li>NextJS</li>
+                <li>NodeJS</li>
                 <li>Nginx</li>
               </ul>
               <DetailHeadline>Snapshots:</DetailHeadline>

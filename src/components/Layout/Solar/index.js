@@ -31,7 +31,7 @@ const SolarIcon = styled(Solar)`
 
   .solar-system {
     position: absolute;
-    top: 75px;
+    top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
