@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import JuraMedium from "~styles/assets/fonts/Jura-Medium.ttf";
+import bg from "~images/bg.png";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -18,7 +19,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: "Jura Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-		background: #001628;
+		background: url(${bg}) no-repeat center center fixed;
+		background-color: #010007;
 		color: #fff;
   }
 

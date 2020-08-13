@@ -15,7 +15,7 @@ Spinner.propTypes = {
 const SpinnerIcon = styled(Spinner)`
   position: relative;
   top: 20px;
-  opacity: 0.25;
+  opacity: 0.5;
 
   .spinner {
     position: absolute;
@@ -35,7 +35,7 @@ const SpinnerIcon = styled(Spinner)`
       color-stop(90%, #000000)
     );
     -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
-    transform-origin: 70% 50%;
+    transform-origin: 60% 50%;
     -webkit-transform: perspective(200px) rotateX(66deg);
     transform: perspective(200px) rotateX(66deg);
     -webkit-animation: spinner-wiggle 1.2s infinite;

@@ -31,7 +31,7 @@ const FOOTERLINKS = [
 ];
 
 const Header = () => (
-  <header css="padding-top: 40px;">
+  <header css="padding-top: 60px;">
     <IconContext.Provider
       value={{
         style: { fontSize: 18, verticalAlign: "text-top", marginRight: 5 },

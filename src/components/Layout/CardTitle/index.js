@@ -6,7 +6,7 @@ const CardTitle = styled.div`
   letter-spacing: 1px;
   padding: 2px;
   margin: 0;
-  text-shadow: 0px 0px 2px #fff;
+  font-weight: bold;
   background-color: #00284a;
 `;
 

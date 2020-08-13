@@ -20,9 +20,9 @@ const Card = styled.div`
     border: 1px solid transparent;
     border-image: linear-gradient(
       to top,
-      #0096ff 0%,
+      #73b9ff 0%,
       #005193 50%,
-      #001628 100%
+      #73b9ff 100%
     );
     border-image-slice: 1;
   }
@@ -30,11 +30,11 @@ const Card = styled.div`
   &:hover {
     background-color: rgba(2, 28, 48, 0.4);
     box-shadow: 0px 0px 26px -2px rgba(0, 64, 255, 1);
-    transform: scale(1.25);
+    transform: scale(1.1);
     transition: transform 300ms ease-in-out;
 
     ${CardTitle} {
-      background: #0078cf;
+      background: #0080ff;
     }
 
     .bar1,
@@ -46,7 +46,12 @@ const Card = styled.div`
 
     &::after {
       border: 2px solid transparent;
-      border-image: linear-gradient(to top, #73b9ff 0%, transparent 100%);
+      border-image: linear-gradient(
+        to top,
+        #73b9ff 0%,
+        #005193 50%,
+        #73b9ff 100%
+      );
       border-image-slice: 1;
     }
   }

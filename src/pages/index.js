@@ -5,8 +5,9 @@ import Flex from "~components/Layout/Flex";
 import ImageContainer from "~components/Layout/ImageContainer";
 import Head from "~components/Navigation/Header";
 import Link from "~components/Navigation/Link";
-import ComposablePreview from "~images/composablePreview2.png";
+import ComposablePreview from "~images/composablePreview.png";
 import SJSIceTeamPreview from "~images/sjsiceteamPreview.png";
+import NextSSRKit from "~images/nextssrKit.png";
 
 const PROJECTS = [
   {
@@ -28,6 +29,8 @@ const PROJECTS = [
     title: "Next SSR Kit",
     href: "next-ssr-kit",
     description: "A custom fully-loaded boilerplate for server-side solutions.",
+    image: NextSSRKit,
+    imagealt: "next-ssr-kit.png",
   },
   {
     title: "React SMDE",
