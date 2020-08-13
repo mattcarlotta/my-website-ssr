@@ -1,78 +1,65 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
+import * as React from "react";
 import { createPortal } from "react-dom";
+import PropTypes from "prop-types";
 import { FaTimes } from "react-icons/fa";
-import Flex from "~components/Layout/Flex";
-import FlexEnd from "~components/Layout/FlexEnd";
-import FlexStart from "~components/Layout/FlexStart";
+import Bars from "~components/Layout/Bars";
+import Orbits from "~components/Layout/Orbits";
+import Solar from "~components/Layout/Solar";
+import FlexEnd from "./FlexEnd";
 import BackgroundOverlay from "./BackgroundOverlay";
 import CloseModalButton from "./CloseModalButton";
+import ClickHandler from "./ClickHandler";
 import ModalContent from "./ModalContent";
 import ModalContainer from "./ModalContainer";
-import ModalRoot from "./ModalRoot";
 import WindowContainer from "./WindowContainer";
 
-export class Modal extends PureComponent {
-  /* istanbul ignore next */
-  componentDidMount() {
-    document.body.style.overflow = "hidden";
-  }
+class Modal extends React.PureComponent {
+  componentDidUpdate = prevProps => {
+    const { isOpen } = this.props;
 
-  /* istanbul ignore next */
-  componentWillUnmount() {
-    document.body.style.overflow = null;
-  }
+    if (isOpen !== prevProps.isOpen && isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  };
 
   render = () =>
-    createPortal(
-      <div data-testid="modal-overlay">
-        <BackgroundOverlay />
-        <WindowContainer>
-          <ModalRoot>
-            <ModalContainer
-              data-testid="modal-container"
-              maxWidth={this.props.maxWidth}
-            >
-              <ModalContent data-testid="modal-content">
-                <Flex
-                  data-testid="modal-header"
-                  style={{ padding: 15, width: "auto" }}
-                >
-                  <FlexStart>
-                    <div
-                      data-testid="modal-title"
-                      css="padding: 2px;font-weight: bold;color: #7d7d7d;font-size: 16px;"
-                    >
-                      {this.props.title}
-                    </div>
-                  </FlexStart>
-                  <FlexEnd>
-                    <CloseModalButton
-                      data-testid="close-modal"
-                      aria-label="close modal"
-                      onClick={this.props.onClick || null}
-                    >
-                      <FaTimes />
-                    </CloseModalButton>
-                  </FlexEnd>
-                </Flex>
-                <div data-testid="modal-body" css="padding: 10px 20px 20px;">
-                  {this.props.children}
-                </div>
-              </ModalContent>
-            </ModalContainer>
-          </ModalRoot>
-        </WindowContainer>
-      </div>,
-      document.body,
-    );
+    this.props.isOpen
+      ? createPortal(
+          <>
+            <BackgroundOverlay />
+            <WindowContainer>
+              <ModalContainer maxWidth={this.props.maxWidth}>
+                <ClickHandler closeModal={this.props.onClick}>
+                  <ModalContent>
+                    <FlexEnd>
+                      <CloseModalButton
+                        id="close-modal"
+                        onClick={this.props.onClick}
+                      >
+                        <FaTimes />
+                      </CloseModalButton>
+                    </FlexEnd>
+                    <Solar style={{ top: -75 }} />
+                    <Bars />
+                    <Orbits />
+                    {this.props.children}
+                  </ModalContent>
+                </ClickHandler>
+              </ModalContainer>
+            </WindowContainer>
+          </>,
+          document.body,
+        )
+      : null;
 }
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  maxWidth: PropTypes.string,
+  isOpen: PropTypes.bool.isRequired,
   onClick: PropTypes.func,
-  title: PropTypes.string,
+  maxWidth: PropTypes.string,
 };
 
 export default Modal;

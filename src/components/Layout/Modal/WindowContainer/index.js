@@ -1,23 +1,34 @@
 /* istanbul ignore file */
 import styled from "styled-components";
 
-export default styled.div`
+const WindowContainer = styled.div`
   text-align: center;
   position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: 0;
   z-index: 100;
-  overflow: auto;
-  outline: 0px;
-  animation: 0.2s ease-in-out 0s 1 normal forwards running fadeIn;
+  ${({ state }) => {
+    switch (state) {
+      case "enter":
+      case "entering":
+      case "exiting": {
+        return "overflow: hidden;";
+      }
+      default:
+        return "overflow: auto;";
+    }
+  }};
 
   &::before {
     display: inline-block;
-    width: 0px;
+    width: 0;
     height: 100%;
     vertical-align: middle;
     content: "";
   }
 `;
+
+export default WindowContainer;

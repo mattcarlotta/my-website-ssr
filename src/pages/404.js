@@ -1,29 +1,32 @@
 import React from "react";
 import Head from "next/head";
+import { GoHome } from "react-icons/go";
+import Center from "~components/Layout/Center";
 import Flex from "~components/Layout/Flex";
-import HomeIcon from "~components/Layout/HomeIcon";
 import Link from "~components/Navigation/Link";
 
 const NotFound = () => (
   <Flex
     data-testid="not-found-page"
     justify="center"
-    style={{ height: "90vh" }}
+    style={{ height: "50vh" }}
     id="notfound"
   >
     <Head>
-      <title>Not Found - NextJS SSR Kit</title>
+      <title>Not Found - Matt Carlotta</title>
     </Head>
-    <div css="color: #03a9f3;text-align: center;">
-      <div css="font-size: 120px;margin-bottom: 0;padding: 0px;">404</div>
-      <div css="font-size: 32px;font-weight: bold;margin-top: -5px;margin-bottom: 20px;letter-spacing: 2px;">
+    <Center>
+      <div css="font-size: 40px;margin-bottom: 0;padding: 0px;">404</div>
+      <div css="font-size: 20px;font-weight: bold;margin-top: -5px;margin-bottom: 20px;letter-spacing: 2px;">
         Uh Oh! Page not found!
       </div>
       <Link href="/">
-        <HomeIcon />
+        <GoHome
+          style={{ fontSize: 18, verticalAlign: "baseline", marginRight: 5 }}
+        />
         <span>Go Back</span>
       </Link>
-    </div>
+    </Center>
   </Flex>
 );
 

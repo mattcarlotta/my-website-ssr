@@ -1,18 +1,65 @@
-import React from "react";
-import Link from "next/link";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import Link from "next/link";
 
-const StyledLink = ({ children, href, ...rest }) => (
-  <Link href={href} prefetch={false} passHref>
-    <a data-testid="link" {...rest} className="link">
+const LinkComponent = ({
+  asHref,
+  className,
+  children,
+  dataTest,
+  href,
+  onClick,
+  stopPropagation,
+  style,
+  target,
+}) => (
+  <Link href={href} as={asHref} prefetch={false} passHref>
+    <a
+      data-test={dataTest}
+      style={style}
+      className={className}
+      target={target}
+      onClick={stopPropagation ? e => e.stopPropagation() : onClick}
+    >
       {children}
     </a>
   </Link>
 );
 
-StyledLink.propTypes = {
-  children: PropTypes.node.isRequired,
+LinkComponent.propTypes = {
+  asHref: PropTypes.string,
+  className: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  dataTest: PropTypes.string,
   href: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  stopPropagation: PropTypes.bool,
+  style: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ),
+  target: PropTypes.string,
 };
+
+LinkComponent.defaultProps = {
+  onClick: () => {},
+};
+
+const StyledLink = styled(LinkComponent)`
+  padding: ${({ padding }) => padding || "10px 15px"};
+  color: #1295f3;
+  transition: all 0.5s;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  &:focus {
+    outline: none !important;
+    text-decoration: none;
+  }
+`;
 
 export default StyledLink;

@@ -1,5 +1,6 @@
-import Document from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { version } from "../../package.json";
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -26,6 +27,30 @@ class CustomDocument extends Document {
       sheet.seal();
     }
   }
+
+  render = () => (
+    <Html lang="en">
+      <Head>
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="description"
+          content="Official website for the Sharks Ice Team."
+        />
+        <meta name="build version" content={version} />
+        <link
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="/ITLogo_192x192.png"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
 
 export default CustomDocument;

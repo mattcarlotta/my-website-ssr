@@ -2,60 +2,37 @@ import Modal from "../index";
 
 const onClick = jest.fn();
 
-const initialProps = {
-  children: <p data-testid="modal-details">Test</p>,
-  maxWidth: "",
-  onClick: undefined,
-  title: "Test Title",
+const initProps = {
+  children: <h1>Example Modal Content</h1>,
+  isOpen: false,
+  onClick,
 };
 
+const wrapper = mount(
+  <Modal {...initProps}>
+    <span>Hello</span>
+  </Modal>,
+);
+
 describe("Modal", () => {
-  let wrapper;
-  beforeEach(() => {
-    wrapper = mount(<Modal {...initialProps} />);
+  it("initially renders nothing", () => {
+    expect(wrapper.find("ModalContainer").exists()).toBeFalsy();
   });
 
-  // it("initially adds an 'overflow:hidden' style to the body", () => {
-  //   expect(wrapper.find("body")).toHaveStyle("overflow: hidden");
-  // });
-
-  // it("removes 'overflow:hidden' style from the body on unmount", () => {
-  //   wrapper.unmount();
-  //   expect(wrapper.find("body")).not.toHaveStyle("overflow: hidden");
-  // });
-
-  it("renders without errors", () => {
-    expect(wrapper.find("[data-testid='modal-overlay']")).toExist();
+  it("renders a modal with some sample content without errors", () => {
+    wrapper.setProps({ isOpen: true });
+    expect(wrapper.find("ModalContainer").exists()).toBeTruthy();
   });
 
-  it("renders the title", () => {
-    expect(wrapper.find("[data-testid='modal-title']").first()).toHaveText(
-      initialProps.title,
-    );
-  });
-
-  it("closes the modal when the close button is clicked", () => {
+  it("calls a passed in 'onClick' prop function", () => {
     wrapper.setProps({ onClick });
-    wrapper.find("[data-testid='close-modal']").first().simulate("click");
 
-    expect(onClick).toHaveBeenCalledTimes(1);
+    wrapper.find("button").simulate("click");
+    expect(onClick).toHaveBeenCalled();
   });
 
-  it("renders wrapped children nodes", () => {
-    expect(wrapper.find("[data-testid='modal-details']")).toExist();
-  });
-
-  it("initially sets the max-width to 600px", () => {
-    expect(
-      wrapper.find("[data-testid='modal-container']").first(),
-    ).toHaveStyleRule("max-width", "600px");
-  });
-
-  it("initially sets the max-width to 'this.props.maxWidth'", () => {
-    wrapper.setProps({ maxWidth: "700px" });
-
-    expect(
-      wrapper.find("[data-testid='modal-container']").first(),
-    ).toHaveStyleRule("max-width", "700px");
+  it("closes the modal", () => {
+    wrapper.setProps({ isOpen: false });
+    expect(wrapper.find("ModalContainer").exists()).toBeFalsy();
   });
 });

@@ -1,6 +1,7 @@
-/* istanbul ignore file */
 import styled from "styled-components";
 
-export default styled.h2`
-  margin: 5px;
+const SubTitle = styled.div`
+  font-size: 16px;
 `;
+
+export default SubTitle;
