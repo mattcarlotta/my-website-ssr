@@ -1,16 +1,17 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import FlexCenter from "~components/Layout/FlexCenter";
 
 const Orbits = ({ className }) => (
-  <FlexCenter className={className}>
-    <div className="border-1">
-      <div className="core-1"></div>
+  <div className={className}>
+    <div className="container">
+      <div className="circle" />
+      <div className="circle" />
+      <div className="circle" />
+      <div className="circle" />
+      <div className="circle" />
+      <div className="circle" />
     </div>
-    <div className="border-2">
-      <div className="core-2"></div>
-    </div>
-  </FlexCenter>
+  </div>
 );
 
 Orbits.propTypes = {
@@ -19,88 +20,76 @@ Orbits.propTypes = {
 
 const OrbitsIcon = styled(Orbits)`
   position: relative;
-  background-color: transparent;
-  opacity: 0.15;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 400;
+  z-index: -1;
 
-  .border-1,
-  .border-2 {
+  .container {
     position: absolute;
-    top: -10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    padding: 3px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 50%;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    transform: rotateX(60deg) rotateZ(-30deg);
+    animation: rotate 20s infinite linear;
+    transform-style: preserve-3d;
   }
 
-  .border-1 {
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(33%, rgba(63, 249, 220, 0.1)),
-      to(rgba(63, 249, 220, 1))
-    );
-    background: -o-linear-gradient(
-      bottom,
-      rgba(63, 249, 220, 0.1) 33%,
-      rgba(63, 249, 220, 1) 100%
-    );
-    background: linear-gradient(
-      0deg,
-      rgba(63, 249, 220, 0.1) 33%,
-      rgba(63, 249, 220, 1) 100%
-    );
-    -webkit-animation: spin3D 1.8s linear 0s infinite;
-    animation: spin3D 1.8s linear 0s infinite;
-    z-index: -1;
+  .circle:nth-child(1) {
+    transform: rotateZ(72deg) rotateX(63.435deg);
+  }
+  .circle:nth-child(2) {
+    transform: rotateZ(144deg) rotateX(63.435deg);
+  }
+  .circle:nth-child(3) {
+    transform: rotateZ(216deg) rotateX(63.435deg);
+  }
+  .circle:nth-child(4) {
+    transform: rotateZ(288deg) rotateX(63.435deg);
+  }
+  .circle:nth-child(5) {
+    transform: rotateZ(360deg) rotateX(63.435deg);
   }
 
-  .core-1,
-  .core-2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
+  .circle {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transform-style: preserve-3d;
+    border-radius: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px #00020c, inset 0 0 20px #2c4776;
 
-  .border-2 {
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(33%, rgba(255, 171, 145, 0.1)),
-      to(rgba(255, 171, 145, 1))
-    );
-    background: -o-linear-gradient(
-      bottom,
-      rgba(255, 171, 145, 0.1) 33%,
-      rgba(255, 171, 145, 1) 100%
-    );
-    background: linear-gradient(
-      0deg,
-      rgba(255, 171, 145, 0.1) 33%,
-      rgba(255, 171, 145, 1) 100%
-    );
-    -webkit-animation: spin3D 2.2s linear 0s infinite;
-    animation: spin3D 2.2s linear 0s infinite;
-    z-index: -1;
-  }
+    ::after {
+      transform: translateZ(90px);
+    }
 
-  .core-1 {
-    background-color: rgba(11, 142, 208, 0.47);
-  }
+    ::before {
+      transform: translateZ(-90px);
+    }
 
-  .core-2 {
-    background-color: rgba(113, 171, 199, 0.67);
+    ::before,
+    ::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background: #2c4776;
+      box-shadow: 0 0 5px 2px #2c4776;
+    }
   }
 `;
 

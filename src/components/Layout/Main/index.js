@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Main = styled.main`
   height: 100%;
   width: 100%;
   max-width: 950px;
@@ -8,4 +8,4 @@ const Wrapper = styled.div`
   padding: 0 10px;
 `;
 
-export default Wrapper;
+export default Main;

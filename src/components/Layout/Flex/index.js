@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export default styled.div`
-  @media (min-width: 1000px) {
-    justify-content: left;
-  }
-
   flex-direction: ${({ direction }) => direction || "row"};
   display: flex;
   align-items: center;

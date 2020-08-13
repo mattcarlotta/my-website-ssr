@@ -13,14 +13,17 @@ Spinner.propTypes = {
 };
 
 const SpinnerIcon = styled(Spinner)`
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   position: relative;
-  top: 20px;
+  top: 18px;
   opacity: 0.5;
 
   .spinner {
     position: absolute;
     margin: auto;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-clip: padding-box;
     width: 200px;
@@ -36,17 +39,15 @@ const SpinnerIcon = styled(Spinner)`
     );
     -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
     transform-origin: 60% 50%;
-    -webkit-transform: perspective(200px) rotateX(66deg);
     transform: perspective(200px) rotateX(66deg);
-    -webkit-animation: spinner-wiggle 1.2s infinite;
     animation: spinner-wiggle 1.2s infinite;
   }
+
   .spinner:before,
   .spinner:after {
     content: "";
     position: absolute;
     margin: -4px;
-    -webkit-box-sizing: inherit;
     box-sizing: inherit;
     width: inherit;
     height: inherit;
@@ -54,8 +55,6 @@ const SpinnerIcon = styled(Spinner)`
     opacity: 0.05;
     border: inherit;
     border-color: transparent;
-    -webkit-animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
-      spinner-fade 1.2s linear infinite;
     animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
       spinner-fade 1.2s linear infinite;
   }
@@ -66,7 +65,6 @@ const SpinnerIcon = styled(Spinner)`
 
   .spinner:after {
     border-top-color: #f0db75;
-    -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
   }
 `;

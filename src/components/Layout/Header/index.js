@@ -4,7 +4,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";
 import FlexCenter from "~components/Layout/FlexCenter";
 import ListItem from "~components/Layout/ListItem";
-import Spinner from "~components/Layout/Spinner";
+import Orbits from "~components/Layout/Orbits";
 import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
 import Center from "~components/Layout/Center";
@@ -53,7 +53,7 @@ const Header = () => (
           ))}
         </FlexCenter>
       </nav>
-      <Spinner />
+      <Orbits />
       <Head title="Home" url="" />
       <Center>
         <Headline>MATT CARLOTTA</Headline>

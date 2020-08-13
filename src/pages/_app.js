@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Body from "~components/Layout/Body";
 import Header from "~components/Layout/Header";
 import Footer from "~components/Layout/Footer";
-import Wrapper from "~components/Layout/Wrapper";
+import Main from "~components/Layout/Main";
 import GlobalStylesheet from "~styles/globalStylesheet";
 
 const App = ({ Component, pageProps }) => (
@@ -15,13 +15,13 @@ const App = ({ Component, pageProps }) => (
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
     </Head>
-    <Wrapper>
+    <Main>
       <Header />
       <Body>
         <Component {...pageProps} />
       </Body>
       <Footer />
-    </Wrapper>
+    </Main>
     <GlobalStylesheet />
   </>
 );
