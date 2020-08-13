@@ -6,12 +6,12 @@ const Solar = ({ className }) => (
   <FlexCenter className={className}>
     <div className="solar-system">
       <div className="earth-orbit orbit">
-        <div className="planet earth"></div>
+        <div className="planet earth" />
         <div className="venus-orbit orbit">
-          <div className="planet venus"></div>
+          <div className="planet venus" />
           <div className="mercury-orbit orbit">
-            <div className="planet mercury"></div>
-            <div className="sun"></div>
+            <div className="planet mercury" />
+            <div className="sun" />
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ const SolarIcon = styled(Solar)`
 
   .solar-system {
     position: absolute;
-    top: 150px;
+    top: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,14 +70,14 @@ const SolarIcon = styled(Solar)`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #3ff9dc;
+    background-color: #0096ff;
   }
 
   .sun {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: #ffab91;
+    background-color: #0096ff;
   }
 `;
 

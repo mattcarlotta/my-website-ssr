@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import styled from "styled-components";
 
 const WindowContainer = styled.div`
@@ -10,17 +9,6 @@ const WindowContainer = styled.div`
   left: 0;
   outline: 0;
   z-index: 100;
-  ${({ state }) => {
-    switch (state) {
-      case "enter":
-      case "entering":
-      case "exiting": {
-        return "overflow: hidden;";
-      }
-      default:
-        return "overflow: auto;";
-    }
-  }};
 
   &::before {
     display: inline-block;

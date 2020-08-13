@@ -1,49 +1,64 @@
 import PropTypes from "prop-types";
+import { GiWorld } from "react-icons/gi";
+import { AiOutlineFolderOpen, AiOutlineCode } from "react-icons/ai";
+import { BsFillCircleFill } from "react-icons/bs";
+import { IconContext } from "react-icons";
 import Info from "~components/Layout/Info";
 
-const FileDetails = ({ destination, fileName, source, status }) => (
-  <>
-    <Info style={{ marginTop: 20 }}>
-      <span className="info">File:&nbsp;</span>
-      {fileName}
-    </Info>
-    <Info>
-      <span className="info">Status:&nbsp;</span>
-      {status}
-    </Info>
-    <Info>
-      <span className="info">Destination:&nbsp;</span>
-      <a
-        href={destination.link}
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-label="Link to hosted website"
-      >
-        {destination.text}
-      </a>
-    </Info>
-    <Info>
-      <span className="info">Source:&nbsp;</span>
-      <a
-        href={source}
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-label="Link to source code"
-      >
-        github
-      </a>
-    </Info>
-  </>
+const FileDetails = ({ active, location, fileName, source, status }) => (
+  <IconContext.Provider
+    value={{
+      style: { fontSize: 18, verticalAlign: "text-top", marginRight: 5 },
+    }}
+  >
+    <div css="margin-bottom: 20px; padding-left: 20px;">
+      <Info>
+        <BsFillCircleFill style={{ color: active ? "limegreen" : "#2c4776" }} />
+        {status}
+      </Info>
+      <Info>
+        <AiOutlineFolderOpen />
+        {fileName}
+      </Info>
+      <Info>
+        <GiWorld />
+        <a
+          href={location.link}
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Link to hosted website"
+        >
+          {location.text}
+        </a>
+      </Info>
+      <Info>
+        <AiOutlineCode />
+        <a
+          href={source}
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Link to source code"
+        >
+          github
+        </a>
+      </Info>
+    </div>
+  </IconContext.Provider>
 );
 
 FileDetails.propTypes = {
+  active: PropTypes.bool,
   fileName: PropTypes.string.isRequired,
-  destination: PropTypes.shape({
+  location: PropTypes.shape({
     link: PropTypes.string,
     text: PropTypes.string.isRequired,
   }).isRequired,
   status: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
+};
+
+FileDetails.defaultProps = {
+  active: false,
 };
 
 export default FileDetails;

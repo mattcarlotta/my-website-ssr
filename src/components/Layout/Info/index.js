@@ -4,22 +4,20 @@ const Info = styled.div`
   @media (max-width: 550px) {
     word-wrap: break-word;
     word-break: break-all;
-    margin: 10px 0;
-
-    .info {
-      display: block;
-    }
   }
 
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
   font-size: 14px;
 
   a,
   a:visited {
     color: #0096ff;
-    text-decoration: none;
     transition: all 0.5s;
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   a:hover {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const CloseModalButton = styled.button`
   cursor: pointer;
-  color: #eee;
+  color: #ccc;
   border: 0;
   height: 25px;
   width: 25px;
@@ -11,14 +11,11 @@ const CloseModalButton = styled.button`
   right: 16px;
   position: absolute;
   background-color: transparent;
-  -webkit-font-smoothing: auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   font-size: 20px;
 
   &:hover {
-    opacity: 0.5;
+    color: rgb(245, 34, 45);
   }
 
   &:focus {

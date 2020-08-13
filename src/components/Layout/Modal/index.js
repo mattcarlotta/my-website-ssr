@@ -2,10 +2,6 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import { FaTimes } from "react-icons/fa";
-import Bars from "~components/Layout/Bars";
-import Orbits from "~components/Layout/Orbits";
-import Solar from "~components/Layout/Solar";
-import FlexEnd from "./FlexEnd";
 import BackgroundOverlay from "./BackgroundOverlay";
 import CloseModalButton from "./CloseModalButton";
 import ClickHandler from "./ClickHandler";
@@ -33,17 +29,12 @@ class Modal extends React.PureComponent {
               <ModalContainer maxWidth={this.props.maxWidth}>
                 <ClickHandler closeModal={this.props.onClick}>
                   <ModalContent>
-                    <FlexEnd>
-                      <CloseModalButton
-                        id="close-modal"
-                        onClick={this.props.onClick}
-                      >
-                        <FaTimes />
-                      </CloseModalButton>
-                    </FlexEnd>
-                    <Solar style={{ top: -75 }} />
-                    <Bars />
-                    <Orbits />
+                    <CloseModalButton
+                      id="close-modal"
+                      onClick={this.props.onClick}
+                    >
+                      <FaTimes />
+                    </CloseModalButton>
                     {this.props.children}
                   </ModalContent>
                 </ClickHandler>
