@@ -98,7 +98,7 @@ const PROJECTS = [
   },
   {
     title: "Nvidia Fan Controller (nvfc) App",
-    href: "nvfcApp",
+    href: "nvfc-app",
     description:
       "A standalone Linux application that creates a modifiable 2D curve of temp and fan speed points that automatically controls a Nvidia GPU's fan based on the GPU's temperature.",
     image: NVFCAppPreview,
