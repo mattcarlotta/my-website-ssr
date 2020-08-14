@@ -3,6 +3,8 @@ import Card from "~components/Layout/Card";
 import CardTitle from "~components/Layout/CardTitle";
 import Flex from "~components/Layout/Flex";
 import ImageContainer from "~components/Layout/ImageContainer";
+import LoadingImage from "~components/Layout/LoadingImage";
+import NoSSR from "~components/Layout/NoSSR";
 import Head from "~components/Navigation/Header";
 import Link from "~components/Navigation/Link";
 // import ProjectAeonPreview from "~images/projectaeonPreviewMin.png";
@@ -136,11 +138,13 @@ const Home = () => (
             <CardTitle>{title}</CardTitle>
             <Bars />
             <ImageContainer>
-              <img
-                css="max-height: 180px;max-width: 250px; margin: 0 auto; border-radius: 4px;"
-                src={image}
-                alt={alt}
-              />
+              <NoSSR fallback={<LoadingImage size="180" opacity="1" />}>
+                <img
+                  css="max-height: 180px;max-width: 250px; margin: 0 auto; border-radius: 4px;"
+                  src={image}
+                  alt={alt}
+                />
+              </NoSSR>
             </ImageContainer>
           </Card>
         </Link>

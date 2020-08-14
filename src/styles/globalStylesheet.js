@@ -32,6 +32,15 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
+	@keyframes wave {
+    0% {
+      left: -60%;
+    }
+    100% {
+      left: 125%;
+    }
+  }
+
   @keyframes spinner-spin {
   	100% {
   		-webkit-transform: rotate(360deg);
