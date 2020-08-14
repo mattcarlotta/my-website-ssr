@@ -8,7 +8,6 @@ import ClickHandler from "./ClickHandler";
 import ModalContent from "./ModalContent";
 import ModalContainer from "./ModalContainer";
 import WindowContainer from "./WindowContainer";
-import NoSSR from "../NoSSR";
 
 class Modal extends React.PureComponent {
   componentDidUpdate = prevProps => {
@@ -22,9 +21,8 @@ class Modal extends React.PureComponent {
   };
 
   render = () =>
-    this.props.isOpen ? (
-      <NoSSR>
-        {createPortal(
+    this.props.isOpen
+      ? createPortal(
           <>
             <BackgroundOverlay />
             <WindowContainer>
@@ -44,9 +42,8 @@ class Modal extends React.PureComponent {
             </WindowContainer>
           </>,
           document.body,
-        )}
-      </NoSSR>
-    ) : null;
+        )
+      : null;
 }
 
 Modal.propTypes = {
