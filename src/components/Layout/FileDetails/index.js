@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
-import { GiWorld } from "react-icons/gi";
 import { AiOutlineFolderOpen, AiOutlineCode } from "react-icons/ai";
 import { BsFillCircleFill } from "react-icons/bs";
+import { RiMapPin2Line } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import Info from "~components/Layout/Info";
 
 const FileDetails = ({ active, location, fileName, source, status }) => (
   <IconContext.Provider
     value={{
-      style: { fontSize: 20, verticalAlign: "text-top", marginRight: 5 },
+      style: { fontSize: 20, verticalAlign: "text-top", marginRight: 7 },
     }}
   >
     <div css="margin-bottom: 20px; padding-left: 20px;">
@@ -20,17 +20,19 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
         <AiOutlineFolderOpen />
         {fileName}
       </Info>
-      <Info>
-        <GiWorld />
-        <a
-          href={location.link}
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Link to hosted website"
-        >
-          {location.text}
-        </a>
-      </Info>
+      {location && (
+        <Info>
+          <RiMapPin2Line />
+          <a
+            href={location.link}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Link to hosted website"
+          >
+            {location.text}
+          </a>
+        </Info>
+      )}
       <Info>
         <AiOutlineCode />
         <a
@@ -52,7 +54,7 @@ FileDetails.propTypes = {
   location: PropTypes.shape({
     link: PropTypes.string,
     text: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
   status: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
 };

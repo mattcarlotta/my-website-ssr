@@ -83,7 +83,7 @@ const SJSIceTeam = () => (
     <ModalContainer>
       {(isOpen, selected, toggleModal) => (
         <Project>
-          <PanelTitle>San Jose Sharks Ice Team</PanelTitle>
+          <PanelTitle>SJS Ice Team</PanelTitle>
           <Panel>
             <Text>
               <DetailHeadline>Details:</DetailHeadline>
@@ -94,7 +94,7 @@ const SJSIceTeam = () => (
                   link: "https://sjsiceteam.com",
                   text: "https://sjsiceteam.com",
                 }}
-                status="Operational"
+                status="In Orbit"
                 source="https://github.com/mattcarlotta/SJSITApp"
               />
               <DetailHeadline>Description:</DetailHeadline>
@@ -140,7 +140,7 @@ const SJSIceTeam = () => (
           </Panel>
           <Modal isOpen={isOpen} maxWidth="2325px" onClick={toggleModal}>
             <Image
-              styles="width: 100%;max-width: 1800px; margin: 10px auto; display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);"
+              styles="width: 100%;max-width: 1800px; margin: 10px auto; display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
               src={selected}
               alt={selected}
             />
