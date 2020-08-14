@@ -23,7 +23,7 @@ class Modal extends React.PureComponent {
   render = () =>
     this.props.isOpen
       ? createPortal(
-          <>
+          <div id="modal">
             <BackgroundOverlay />
             <WindowContainer>
               <ModalContainer maxWidth={this.props.maxWidth}>
@@ -40,7 +40,7 @@ class Modal extends React.PureComponent {
                 </ClickHandler>
               </ModalContainer>
             </WindowContainer>
-          </>,
+          </div>,
           document.body,
         )
       : null;

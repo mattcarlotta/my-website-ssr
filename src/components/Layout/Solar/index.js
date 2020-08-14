@@ -31,7 +31,7 @@ const SolarIcon = styled(Solar)`
 
   .solar-system {
     position: absolute;
-    top: 50px;
+    top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,21 +47,21 @@ const SolarIcon = styled(Solar)`
   }
 
   .earth-orbit {
-    width: 665px;
-    height: 665px;
-    -webkit-animation: spin 12s linear 0s infinite;
+    width: 800px;
+    height: 800px;
+    animation: spin 12s linear 0s infinite;
   }
 
   .venus-orbit {
-    width: 420px;
-    height: 420px;
-    -webkit-animation: spin 7.4s linear 0s infinite;
+    width: 555px;
+    height: 555px;
+    animation: spin 7.4s linear 0s infinite;
   }
 
   .mercury-orbit {
-    width: 190px;
-    height: 190px;
-    -webkit-animation: spin 3s linear 0s infinite;
+    width: 325px;
+    height: 325px;
+    animation: spin 3s linear 0s infinite;
   }
 
   .planet {

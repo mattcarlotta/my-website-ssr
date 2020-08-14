@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const WindowContainer = styled.div`
   text-align: center;
+  overflow-y: auto;
   position: fixed;
   top: 0;
   right: 0;

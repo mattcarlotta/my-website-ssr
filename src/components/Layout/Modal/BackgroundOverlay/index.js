@@ -8,7 +8,6 @@ const Background = styled.div`
   bottom: 0;
   z-index: 3;
   position: fixed;
-  -ms-touch-action: none;
   touch-action: none;
   background-color: rgba(56, 56, 56, 0.85);
   opacity: 1;

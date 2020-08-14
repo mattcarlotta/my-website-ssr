@@ -1,18 +1,77 @@
+import CardTitle from "~components/Layout/CardTitle";
 import DetailHeadline from "~components/Layout/DetailHeadline";
+import Image from "~components/Layout/Image";
+import Flex from "~components/Layout/Flex";
 import Modal from "~components/Layout/Modal";
 import ModalContainer from "~components/Layout/ModalContainer";
 import Panel from "~components/Layout/Panel";
+import PreviewCard from "~components/Layout/PreviewCard";
 import Project from "~components/Layout/Project";
 import FileDetails from "~components/Layout/FileDetails";
 import SubTitle from "~components/Layout/SubTitle";
 import Text from "~components/Layout/Text";
 import PanelTitle from "~components/Layout/PanelTitle";
-import Snapshot from "~components/Layout/Snapshot";
 import SnapshotContainer from "~components/Layout/SnapshotContainer";
 import Home from "~components/Navigation/Home";
 import Head from "~components/Navigation/Header";
-import SJSIceTeamPreviewMin from "~images/sjsiceteamPreviewMin.png";
-import SJSIceTeamPreview from "~images/sjsiceteamPreview.png";
+
+const IMAGES = [
+  {
+    src: "dashboard/sjsiceteamDashboard",
+    alt: "availability-preview",
+    title: "Dashboard",
+  },
+  {
+    src: "email/sjsiceteamEmailEventReminder",
+    alt: "email-upcoming-event-preview",
+    title: "Email - Event",
+  },
+  {
+    src: "email/sjsiceteamEmailScheduleReminder",
+    alt: "email-upcoming-schedule-preview",
+    title: "Email - Schedule",
+  },
+  {
+    src: "events/sjsiceteamEvents",
+    alt: "events-preview",
+    title: "Events",
+  },
+  {
+    src: "schedule/sjsiceteamEventSchedule",
+    alt: "event-scheduling-preview",
+    title: "Event Scheduling",
+  },
+  {
+    src: "help/sjsiceteamHelp",
+    alt: "help-preview",
+    title: "Help",
+  },
+  {
+    src: "availability/sjsiceteamAvailability",
+    alt: "member-availability-preview",
+    title: "Member - Availabilty",
+  },
+  {
+    src: "settings/sjsiceteamSettings",
+    alt: "member-settings-preview",
+    title: "Member - Settings",
+  },
+  {
+    src: "schedule/sjsiceteamSchedule",
+    alt: "schedule-calendar-preview",
+    title: "Schedule - Calendar",
+  },
+  {
+    src: "schedule/sjsiceteamScheduleMyGames",
+    alt: "scheduled-my-games-preview",
+    title: "Schedule - My Games",
+  },
+  {
+    src: "schedule/sjsiceteamScheduledEvent",
+    alt: "scheduled-my-event-preview",
+    title: "Schedule - My Event",
+  },
+];
 
 const SJSIceTeam = () => (
   <>
@@ -22,7 +81,7 @@ const SJSIceTeam = () => (
       description="An application to manage the San Jose Sharks Ice Team scheduling."
     />
     <ModalContainer>
-      {(isOpen, toggleModal) => (
+      {(isOpen, selected, toggleModal) => (
         <Project>
           <PanelTitle>San Jose Sharks Ice Team</PanelTitle>
           <Panel>
@@ -46,8 +105,9 @@ const SJSIceTeam = () => (
                 of the San Jose Sharks Ice Team. The application is separated
                 into 4 services: Front-facing application, an automated emailing
                 microservice, an image content delivery microservice, and a
-                database backup script. The main application utilizes NextJS for
-                SEO, while the microservices utilize NodeJS with ExpressJS.
+                database optimization microservice. The main application
+                utilizes NextJS for SEO, while the microservices utilize NodeJS
+                with ExpressJS.
               </SubTitle>
               <DetailHeadline>Tech Specs:</DetailHeadline>
               <ul>
@@ -60,19 +120,29 @@ const SJSIceTeam = () => (
               </ul>
               <DetailHeadline>Snapshots:</DetailHeadline>
               <SnapshotContainer>
-                <Snapshot
-                  src={SJSIceTeamPreviewMin}
-                  alt="sjsiceteam.png"
-                  onClick={toggleModal}
-                />
+                <Flex justify="center" wrap="wrap">
+                  {IMAGES.map(({ src, alt, title }) => (
+                    <PreviewCard
+                      key={src}
+                      onClick={() => toggleModal(`projects/sjsit/${src}`)}
+                    >
+                      <CardTitle>{title}</CardTitle>
+                      <Image
+                        src={`projects/sjsit/${src}Min`}
+                        alt={alt}
+                        styles="width: 100%;border-radius: 4px;"
+                      />
+                    </PreviewCard>
+                  ))}
+                </Flex>
               </SnapshotContainer>
             </Text>
           </Panel>
           <Modal isOpen={isOpen} maxWidth="2325px" onClick={toggleModal}>
-            <img
-              css="width: 100%;max-width: 1000px; margin: 10px auto; display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);"
-              src={SJSIceTeamPreview}
-              alt="sjsiceteam.png"
+            <Image
+              styles="width: 100%;max-width: 1800px; margin: 10px auto; display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);"
+              src={selected}
+              alt={selected}
             />
           </Modal>
         </Project>
