@@ -10,10 +10,16 @@ import PanelTitle from "~components/Layout/PanelTitle";
 import Snapshot from "~components/Layout/Snapshot";
 import SnapshotContainer from "~components/Layout/SnapshotContainer";
 import Home from "~components/Navigation/Home";
+import Head from "~components/Navigation/Header";
 import SJSIceTeamPreview from "~images/sjsiceteamPreview.png";
 
 const SJSIceTeam = () => (
   <>
+    <Head
+      title="SJS Ice Team"
+      url="/sjs-ice-team"
+      description="An application to manage the San Jose Sharks Ice Team scheduling."
+    />
     <ModalContainer>
       {(isOpen, toggleModal) => (
         <Project>

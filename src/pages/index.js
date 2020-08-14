@@ -116,7 +116,7 @@ const PROJECTS = [
 
 const Home = () => (
   <>
-    <Head title="Home" url="/" />
+    <Head title="Home" url="/" description="My personal website." />
     <Flex justify="center" wrap="wrap">
       {PROJECTS.map(({ title, href, image, alt }) => (
         <Link key={href} padding="0px" href={`/${href}`}>

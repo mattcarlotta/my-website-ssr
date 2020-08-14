@@ -6,7 +6,7 @@ const { LOCALHOST } = process.env;
 const Header = ({ children, description, keywords, title, type, url }) => (
   <Head>
     <title>{title} - Matt Carlotta</title>
-    <link rel="canonical" href={`${LOCALHOST}/${url}`} />
+    <link rel="canonical" href={`${LOCALHOST}${url}`} />
     {keywords && <meta name="keywords" content={keywords} />}
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
