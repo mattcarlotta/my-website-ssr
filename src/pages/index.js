@@ -7,18 +7,18 @@ import LoadingImage from "~components/Layout/LoadingImage";
 import NoSSR from "~components/Layout/NoSSR";
 import Head from "~components/Navigation/Header";
 import Link from "~components/Navigation/Link";
-import ProjectAeonPreview from "~images/projectaeonPreviewMin.png";
-import ComposablePreview from "~images/composablePreviewMin.png";
-import SJSIceTeamPreview from "~images/sjsiceteamPreviewMin.png";
-import NextSSRKitPreview from "~images/nextssrkitPreviewMin.png";
-import ReactSMDEPreview from "~images/reactsmdePreviewMin.png";
-import AliasDirsPreview from "~images/aliasdirsPreviewMin.png";
-import ReactHooksGuidePreview from "~images/reacthooksPreviewMin.png";
-import SubskribblePreview from "~images/subskribblePreviewMin.png";
-import MERNKitPreview from "~images/mernkitPreviewMin.png";
-import YelpCampPreview from "~images/yelpcampPreviewMin.png";
-import NVFCAppPreview from "~images/nvfcappPreviewMin.png";
-import SSDTGenAppPreview from "~images/ssdtgenappPreviewMin.png";
+// import ProjectAeonPreview from "~images/projectaeonPreviewMin.png";
+// import ComposablePreview from "~images/composablePreviewMin.png";
+// import SJSIceTeamPreview from "~images/sjsiceteamPreviewMin.png";
+// import NextSSRKitPreview from "~images/nextssrkitPreviewMin.png";
+// import ReactSMDEPreview from "~images/reactsmdePreviewMin.png";
+// import AliasDirsPreview from "~images/aliasdirsPreviewMin.png";
+// import ReactHooksGuidePreview from "~images/reacthooksPreviewMin.png";
+// import SubskribblePreview from "~images/subskribblePreviewMin.png";
+// import MERNKitPreview from "~images/mernkitPreviewMin.png";
+// import YelpCampPreview from "~images/yelpcampPreviewMin.png";
+// import NVFCAppPreview from "~images/nvfcappPreviewMin.png";
+// import SSDTGenAppPreview from "~images/ssdtgenappPreviewMin.png";
 
 const PROJECTS = [
   {
@@ -26,7 +26,7 @@ const PROJECTS = [
     href: "project-aeon",
     description:
       "A better web app to ask web development questions and use integrated tools to answer them.",
-    image: ProjectAeonPreview,
+    image: "/projectaeonPreviewMin.png",
     alt: "project-aeon-preview.png",
     ariaLabel: "Navigate to the Project Aeon project page.",
   },
@@ -34,7 +34,7 @@ const PROJECTS = [
     title: "Composable Styled Components",
     href: "composable-styled-components",
     description: "A lightweight composable solution for styled-components.",
-    image: ComposablePreview,
+    image: "/composablePreviewMin.png",
     alt: "composable-preview.png",
     ariaLabel: "Navigate to the Composable Styled Components project page.",
   },
@@ -43,7 +43,7 @@ const PROJECTS = [
     href: "sjs-ice-team",
     description:
       "An application to manage the San Jose Sharks Ice Team scheduling.",
-    image: SJSIceTeamPreview,
+    image: "/sjsiceteamPreviewMin.png",
     alt: "sjsiceteam-preview.png",
     ariaLabel: "Navigate to the SJS Ice Team project page.",
   },
@@ -51,7 +51,7 @@ const PROJECTS = [
     title: "Next SSR Kit",
     href: "next-ssr-kit",
     description: "A custom fully-loaded boilerplate for server-side solutions.",
-    image: NextSSRKitPreview,
+    image: "/nextssrkitPreviewMin.png",
     alt: "next-ssr-kit-preview.png",
     ariaLabel: "Navigate to the Next SSR Kit project page.",
   },
@@ -59,7 +59,7 @@ const PROJECTS = [
     title: "React SMDE",
     href: "react-smde",
     description: "A lightweight, simple, markdown editor for React.",
-    image: ReactSMDEPreview,
+    image: "/reactsmdePreviewMin.png",
     alt: "react-smde-preview.png",
     ariaLabel: "Navigate to the React SMDE project page.",
   },
@@ -68,7 +68,7 @@ const PROJECTS = [
     href: "alias-dirs",
     description:
       "With the help of the babel-plugin-module-resolver, automatically creates aliased directories for babel.",
-    image: AliasDirsPreview,
+    image: "/aliasdirsPreviewMin.png",
     alt: "alias-dirs-preview.png",
     ariaLabel: "Navigate to the Alias Dirs project page.",
   },
@@ -77,7 +77,7 @@ const PROJECTS = [
     href: "react-hooks-guide",
     description:
       "An educational website to help up-and-coming developers understand React’s newly introduced hooks.",
-    image: ReactHooksGuidePreview,
+    image: "/reacthooksPreviewMin.png",
     alt: "react-hooks-guide-preview.png",
     ariaLabel: "Navigate to the React Hooks Guide project page.",
   },
@@ -86,7 +86,7 @@ const PROJECTS = [
     href: "subskribble",
     description:
       "A web application to create, manage, and send personalized updates to a list of subscribers.",
-    image: SubskribblePreview,
+    image: "/subskribblePreviewMin.png",
     alt: "subskribble-preview.png",
     ariaLabel: "Navigate to the Subskribble project page.",
   },
@@ -95,7 +95,7 @@ const PROJECTS = [
     href: "fullstack-mern-kit",
     description:
       "A fully custom boilerplate for MongoDB, Express, React/Redux and Node client-side solutions.",
-    image: MERNKitPreview,
+    image: "/mernkitPreviewMin.png",
     alt: "fs-mern-kit-preview.png",
     ariaLabel: "Navigate to the Fullstack M.E.R.N. Kit project page.",
   },
@@ -104,7 +104,7 @@ const PROJECTS = [
     href: "yelp-camp",
     description:
       "An experimental website for creating, editing, and reviewing campground sites from all over California.",
-    image: YelpCampPreview,
+    image: "/yelpcampPreviewMin.png",
     alt: "yelp-camp-preview.png",
     ariaLabel: "Navigate to the Yelp Camp project page.",
   },
@@ -113,7 +113,7 @@ const PROJECTS = [
     href: "nvfc-app",
     description:
       "A standalone Linux application that creates a modifiable 2D curve of temp and fan speed points that automatically controls a Nvidia GPU's fan based on the GPU's temperature.",
-    image: NVFCAppPreview,
+    image: "/nvfcappPreviewMin.png",
     alt: "nvfc-app-preview.png",
     ariaLabel: "Navigate to the Nvidia Fan Controller App project page.",
   },
@@ -122,7 +122,7 @@ const PROJECTS = [
     href: "ssdtgen-app",
     description:
       "A standalone Mac OS application that builds and compiles custom SSDTs for X99, Z170, Z97, and H97 systems running Mac OS.",
-    image: SSDTGenAppPreview,
+    image: "/ssdtgenappPreviewMin.png",
     alt: "sddtgen-app-preview.png",
     ariaLabel: "Navigate to the ssdtGen App project page.",
   },
@@ -138,13 +138,11 @@ const Home = () => (
             <CardTitle>{title}</CardTitle>
             <Bars />
             <ImageContainer>
-              <NoSSR fallback={<LoadingImage size="180" opacity="1" />}>
-                <img
-                  css="max-height: 180px;max-width: 250px; margin: 0 auto; border-radius: 4px;"
-                  src={image}
-                  alt={alt}
-                />
-              </NoSSR>
+              <img
+                css="max-height: 180px;max-width: 250px; margin: 0 auto; border-radius: 4px;"
+                src={image}
+                alt={alt}
+              />
             </ImageContainer>
           </Card>
         </Link>
