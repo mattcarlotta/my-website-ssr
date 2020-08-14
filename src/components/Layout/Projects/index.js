@@ -26,11 +26,11 @@ const Projects = [
     ariaLabel: "Navigate to the SJS Ice Team project page.",
   },
   {
-    title: "Next SSR Kit",
-    href: "next-ssr-kit",
+    title: "NextJS SSR Kit",
+    href: "nextjs-ssr-kit",
     description: "A custom fully-loaded boilerplate for server-side solutions.",
     src: "nextssrkit/nextssrkitPreviewMin",
-    alt: "next-ssr-kit-preview",
+    alt: "nextjs-ssr-kit-preview",
     ariaLabel: "Navigate to the Next SSR Kit project page.",
   },
   {

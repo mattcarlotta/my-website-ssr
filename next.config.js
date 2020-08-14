@@ -13,7 +13,7 @@ module.exports = {
     "/project-aeon": { page: "/project-aeon" },
     "/composable-styled-components": { page: "/composable-styled-components" },
     "/sjs-ice-team": { page: "/sjs-ice-team" },
-    "/next-ssr-kit": { page: "/next-ssr-kit" },
+    "/nextjs-ssr-kit": { page: "/next-ssr-kit" },
     "/react-smde": { page: "/react-smde" },
     "/alias-dirs": { page: "/alias-dirs" },
     "/react-hooks-guide": { page: "/react-hooks-guide" },

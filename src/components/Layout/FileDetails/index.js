@@ -24,12 +24,12 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
         <Info>
           <RiMapPin2Line />
           <a
-            href={location.link}
+            href={location}
             rel="noopener noreferrer"
             target="_blank"
             aria-label="Link to hosted website"
           >
-            {location.text}
+            {location}
           </a>
         </Info>
       )}
@@ -51,10 +51,7 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
 FileDetails.propTypes = {
   active: PropTypes.bool,
   fileName: PropTypes.string.isRequired,
-  location: PropTypes.shape({
-    link: PropTypes.string,
-    text: PropTypes.string.isRequired,
-  }),
+  location: PropTypes.string,
   status: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
 };

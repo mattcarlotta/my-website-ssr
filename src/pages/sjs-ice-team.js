@@ -15,64 +15,6 @@ import SnapshotContainer from "~components/Layout/SnapshotContainer";
 import Home from "~components/Navigation/Home";
 import Head from "~components/Navigation/Header";
 
-const IMAGES = [
-  {
-    src: "dashboard/sjsiceteamDashboard",
-    alt: "availability-preview",
-    title: "Dashboard",
-  },
-  {
-    src: "email/sjsiceteamEmailEventReminder",
-    alt: "email-upcoming-event-preview",
-    title: "Email - Event",
-  },
-  {
-    src: "email/sjsiceteamEmailScheduleReminder",
-    alt: "email-upcoming-schedule-preview",
-    title: "Email - Schedule",
-  },
-  {
-    src: "events/sjsiceteamEvents",
-    alt: "events-preview",
-    title: "Events",
-  },
-  {
-    src: "schedule/sjsiceteamEventSchedule",
-    alt: "event-scheduling-preview",
-    title: "Event Scheduling",
-  },
-  {
-    src: "help/sjsiceteamHelp",
-    alt: "help-preview",
-    title: "Help",
-  },
-  {
-    src: "availability/sjsiceteamAvailability",
-    alt: "member-availability-preview",
-    title: "Member - Availabilty",
-  },
-  {
-    src: "settings/sjsiceteamSettings",
-    alt: "member-settings-preview",
-    title: "Member - Settings",
-  },
-  {
-    src: "schedule/sjsiceteamSchedule",
-    alt: "schedule-calendar-preview",
-    title: "Schedule - Calendar",
-  },
-  {
-    src: "schedule/sjsiceteamScheduleMyGames",
-    alt: "scheduled-my-games-preview",
-    title: "Schedule - My Games",
-  },
-  {
-    src: "schedule/sjsiceteamScheduledEvent",
-    alt: "scheduled-my-event-preview",
-    title: "Schedule - My Event",
-  },
-];
-
 const SJSIceTeam = () => (
   <>
     <Head
@@ -90,10 +32,7 @@ const SJSIceTeam = () => (
               <FileDetails
                 active
                 fileName="SJS Ice Team"
-                location={{
-                  link: "https://sjsiceteam.com",
-                  text: "https://sjsiceteam.com",
-                }}
+                location="https://sjsiceteam.com"
                 status="In Orbit"
                 source="https://github.com/mattcarlotta/SJSITApp"
               />
@@ -111,17 +50,77 @@ const SJSIceTeam = () => (
               </SubTitle>
               <DetailHeadline>Tech Specs:</DetailHeadline>
               <ul>
-                <li>MongoDB</li>
-                <li>ExpressJS</li>
-                <li>ReactJS (w/ReduxJS)</li>
-                <li>NextJS</li>
-                <li>NodeJS</li>
-                <li>Nginx</li>
+                {[
+                  "MongoDB",
+                  "ReactJS (w/ReduxJS)",
+                  "NextJS",
+                  "ExpressJS",
+                  "NodeJS",
+                  "Nginx",
+                ].map(item => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
               <DetailHeadline>Snapshots:</DetailHeadline>
               <SnapshotContainer>
                 <Flex justify="center" wrap="wrap">
-                  {IMAGES.map(({ src, alt, title }) => (
+                  {[
+                    {
+                      src: "dashboard/sjsiceteamDashboard",
+                      alt: "dashboard-preview",
+                      title: "Dashboard",
+                    },
+                    {
+                      src: "email/sjsiceteamEmailEventReminder",
+                      alt: "email-upcoming-event-preview",
+                      title: "Email - Event",
+                    },
+                    {
+                      src: "email/sjsiceteamEmailScheduleReminder",
+                      alt: "email-upcoming-schedule-preview",
+                      title: "Email - Schedule",
+                    },
+                    {
+                      src: "events/sjsiceteamEvents",
+                      alt: "events-preview",
+                      title: "Events",
+                    },
+                    {
+                      src: "schedule/sjsiceteamEventSchedule",
+                      alt: "event-scheduling-preview",
+                      title: "Event Scheduling",
+                    },
+                    {
+                      src: "help/sjsiceteamHelp",
+                      alt: "help-preview",
+                      title: "Help",
+                    },
+                    {
+                      src: "availability/sjsiceteamAvailability",
+                      alt: "member-availability-preview",
+                      title: "Member - Availabilty",
+                    },
+                    {
+                      src: "settings/sjsiceteamSettings",
+                      alt: "member-settings-preview",
+                      title: "Member - Settings",
+                    },
+                    {
+                      src: "schedule/sjsiceteamSchedule",
+                      alt: "schedule-calendar-preview",
+                      title: "Schedule - Calendar",
+                    },
+                    {
+                      src: "schedule/sjsiceteamScheduleMyGames",
+                      alt: "scheduled-my-games-preview",
+                      title: "Schedule - My Games",
+                    },
+                    {
+                      src: "schedule/sjsiceteamScheduledEvent",
+                      alt: "scheduled-my-event-preview",
+                      title: "Schedule - My Event",
+                    },
+                  ].map(({ src, alt, title }) => (
                     <PreviewCard
                       key={src}
                       onClick={() => toggleModal(`projects/sjsit/${src}`)}

@@ -15,44 +15,45 @@ import SnapshotContainer from "~components/Layout/SnapshotContainer";
 import Home from "~components/Navigation/Home";
 import Head from "~components/Navigation/Header";
 
-const ReactSMDE = () => (
+const NextJSSSRKit = () => (
   <>
     <Head
-      title="React SMDE"
-      url="/react-smde"
-      description="A lightweight, simple, markdown editor for React."
+      title="NextJS SSR Kit"
+      url="/nextjs-ssr-kit"
+      description="A fully-loaded custom NextJS boilerplate for server-side solutions."
     />
     <ModalContainer>
       {(isOpen, selected, toggleModal) => (
         <Project>
-          <PanelTitle>React SMDE</PanelTitle>
+          <PanelTitle>NextJS SSR Kit</PanelTitle>
           <Panel>
             <Text>
               <DetailHeadline>Details:</DetailHeadline>
               <FileDetails
                 active
-                fileName="React SMDE"
+                fileName="NextJS SSR Kit"
                 status="In Orbit"
-                location="https://mattcarlotta.github.io/react-smde"
-                source="https://github.com/mattcarlotta/react-smde"
+                source="https://github.com/mattcarlotta/nextjs-ssr-kit"
               />
               <DetailHeadline>Description:</DetailHeadline>
               <SubTitle>
-                A lightweight Simple Markdown Editor (SMDE) npm package for
-                React.
+                A fully-loaded custom NextJS boilerplate for server-side
+                solutions. This website and several projects were built using
+                this boilerplate!
               </SubTitle>
               <DetailHeadline>Tech Specs:</DetailHeadline>
               <ul>
                 {[
+                  "Cypress",
                   "Enzyme",
                   "Eslint",
                   "Github Actions",
                   "Jest",
-                  "Material-ui",
-                  "ReactJS",
-                  "RollupJS",
+                  "MongoDB",
+                  "NextJS",
+                  "ReactJS (w/ReduxJS + Redux Saga)",
                   "Styled-components",
-                  "StorybookJS",
+                  "Stylelint",
                 ].map(item => (
                   <li key={item}>{item}</li>
                 ))}
@@ -60,35 +61,18 @@ const ReactSMDE = () => (
               <DetailHeadline>Snapshots:</DetailHeadline>
               <SnapshotContainer>
                 <Flex justify="center" wrap="wrap">
-                  {[
-                    {
-                      src: "reactsmdeCode",
-                      alt: "example-code-preview",
-                      title: "Ex. Syntax Code",
-                    },
-                    {
-                      src: "reactsmdeCodePreview",
-                      alt: "example-code-syntax-preview",
-                      title: "Ex. Syntax Code Preview",
-                    },
-                    {
-                      src: "reactsmdeSource",
-                      alt: "example-code-source-preview",
-                      title: "Ex. Syntax Code Source",
-                    },
-                  ].map(({ src, alt, title }) => (
-                    <PreviewCard
-                      key={src}
-                      onClick={() => toggleModal(`projects/reactsmde/${src}`)}
-                    >
-                      <CardTitle>{title}</CardTitle>
-                      <Image
-                        src={`projects/reactsmde/${src}Min`}
-                        alt={alt}
-                        styles="width: 100%;border-radius: 4px;"
-                      />
-                    </PreviewCard>
-                  ))}
+                  <PreviewCard
+                    onClick={() =>
+                      toggleModal("projects/nextssrkit/nextssrkitPreview")
+                    }
+                  >
+                    <CardTitle>Logo</CardTitle>
+                    <Image
+                      src="projects/nextssrkit/nextssrkitPreviewMin"
+                      alt="nextjs-ssr-kit-preview"
+                      styles="width: 100%;border-radius: 4px;"
+                    />
+                  </PreviewCard>
                 </Flex>
               </SnapshotContainer>
             </Text>
@@ -107,4 +91,4 @@ const ReactSMDE = () => (
   </>
 );
 
-export default ReactSMDE;
+export default NextJSSSRKit;

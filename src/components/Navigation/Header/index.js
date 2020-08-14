@@ -10,7 +10,7 @@ const Header = ({ children, description, keywords, title, type, url }) => (
     {keywords && <meta name="keywords" content={keywords} />}
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={`${LOCALHOST}/${url}`} />
+    <meta property="og:url" content={`${LOCALHOST}${url}`} />
     <meta property="og:type" content={type} />
     {children}
   </Head>

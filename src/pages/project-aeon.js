@@ -15,34 +15,6 @@ import SnapshotContainer from "~components/Layout/SnapshotContainer";
 import Home from "~components/Navigation/Home";
 import Head from "~components/Navigation/Header";
 
-const IMAGES = [
-  {
-    src: "projectaeonAskQuestion",
-    alt: "ask-question-preview",
-    title: "Ask Question",
-  },
-  {
-    src: "projectaeonQuestion",
-    alt: "question-preview",
-    title: "Question",
-  },
-  {
-    src: "projectaeonComment",
-    alt: "comment-preview",
-    title: "Comment",
-  },
-  {
-    src: "projectaeonTags",
-    alt: "tags-preview",
-    title: "Tags",
-  },
-  {
-    src: "projectaeonProfile",
-    alt: "profile-preview",
-    title: "Profile",
-  },
-];
-
 const ProjectAeon = () => (
   <>
     <Head
@@ -70,16 +42,46 @@ const ProjectAeon = () => (
               </SubTitle>
               <DetailHeadline>Tech Specs:</DetailHeadline>
               <ul>
-                <li>PostgreSQL</li>
-                <li>ReactJS (w/ReduxJS)</li>
-                <li>NextJS</li>
-                <li>NodeJS</li>
-                <li>Nginx</li>
+                {[
+                  "PostgreSQL",
+                  "ReactJS (w/ReduxJS)",
+                  "NextJS",
+                  "NodeJS",
+                  "Nginx",
+                ].map(item => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
               <DetailHeadline>Snapshots:</DetailHeadline>
               <SnapshotContainer>
                 <Flex justify="center" wrap="wrap">
-                  {IMAGES.map(({ src, alt, title }) => (
+                  {[
+                    {
+                      src: "projectaeonAskQuestion",
+                      alt: "ask-question-preview",
+                      title: "Ask Question",
+                    },
+                    {
+                      src: "projectaeonQuestion",
+                      alt: "question-preview",
+                      title: "Question",
+                    },
+                    {
+                      src: "projectaeonComment",
+                      alt: "comment-preview",
+                      title: "Comment",
+                    },
+                    {
+                      src: "projectaeonTags",
+                      alt: "tags-preview",
+                      title: "Tags",
+                    },
+                    {
+                      src: "projectaeonProfile",
+                      alt: "profile-preview",
+                      title: "Profile",
+                    },
+                  ].map(({ src, alt, title }) => (
                     <PreviewCard
                       key={src}
                       onClick={() => toggleModal(`projects/projectaeon/${src}`)}
