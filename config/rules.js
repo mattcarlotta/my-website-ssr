@@ -19,7 +19,7 @@ module.exports = () => [
     test: staticAssetsRegex,
     loader: "url-loader",
     options: {
-      limit: 8192,
+      limit: 12288,
       fallback: "file-loader",
       publicPath: assetsPublicPath,
       outputPath: assetsFolder,
