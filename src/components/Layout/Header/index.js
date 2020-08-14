@@ -10,7 +10,6 @@ import OutsideLink from "~components/Navigation/OutsideLink";
 import Center from "~components/Layout/Center";
 import Headline from "~components/Layout/Headline";
 import SubHeadline from "~components/Layout/SubHeadline";
-import Head from "~components/Navigation/Header";
 
 const FOOTERLINKS = [
   {
@@ -54,7 +53,6 @@ const Header = () => (
         </FlexCenter>
       </nav>
       <Orbits />
-      <Head title="Home" url="" />
       <Center>
         <Headline>MATT CARLOTTA</Headline>
         <SubHeadline>fullstack web developer and commercial artist</SubHeadline>

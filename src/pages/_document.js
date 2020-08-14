@@ -32,10 +32,6 @@ class CustomDocument extends Document {
     <Html lang="en">
       <Head>
         <meta name="theme-color" content="#000000" />
-        <meta
-          name="description"
-          content="Official website for the Sharks Ice Team."
-        />
         <meta name="build version" content={version} />
         <link
           rel="apple-touch-icon"

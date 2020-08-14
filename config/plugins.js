@@ -6,7 +6,7 @@ const WebpackBar = require("webpackbar");
 const address = require("address");
 const { analyzeClientPath, analyzeServerPath } = require("./paths");
 
-const { analyze, baseURL, LOCALHOST, NODE_ENV, PORT } = process.env;
+const { analyze, LOCALHOST, NODE_ENV, PORT } = process.env;
 const remoteAddress = address.ip();
 const inDev = NODE_ENV === "development";
 
@@ -18,7 +18,7 @@ module.exports = isServer => {
       /* envs for client */
       new DefinePlugin({
         "process.env": {
-          baseURL: JSON.stringify(baseURL),
+          LOCALHOST: JSON.stringify(LOCALHOST),
           NODE_ENV: JSON.stringify(NODE_ENV),
         },
       }),

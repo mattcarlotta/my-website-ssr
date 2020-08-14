@@ -29,7 +29,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  description: "Official website for... something.",
+  description: "My personal website.",
   type: "website",
 };
 
