@@ -8,7 +8,7 @@ import Info from "~components/Layout/Info";
 const FileDetails = ({ active, location, fileName, source, status }) => (
   <IconContext.Provider
     value={{
-      style: { fontSize: 18, verticalAlign: "text-top", marginRight: 5 },
+      style: { fontSize: 20, verticalAlign: "text-top", marginRight: 5 },
     }}
   >
     <div css="margin-bottom: 20px; padding-left: 20px;">
@@ -39,7 +39,7 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
           target="_blank"
           aria-label="Link to source code"
         >
-          github
+          {source}
         </a>
       </Info>
     </div>

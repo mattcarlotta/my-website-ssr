@@ -6,7 +6,7 @@ const Info = styled.div`
     word-break: break-all;
   }
 
-  margin: 5px 0;
+  margin: 10px 0;
   padding: 0;
   font-size: 14px;
 

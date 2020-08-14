@@ -1,9 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import { GoHome } from "react-icons/go";
 import Center from "~components/Layout/Center";
 import Flex from "~components/Layout/Flex";
-import Link from "~components/Navigation/Link";
+import Home from "~components/Navigation/Home";
 
 const NotFound = () => (
   <Flex
@@ -20,12 +19,7 @@ const NotFound = () => (
       <div css="font-size: 20px;font-weight: bold;margin-top: -5px;margin-bottom: 20px;letter-spacing: 2px;">
         Uh Oh! Page not found!
       </div>
-      <Link href="/">
-        <GoHome
-          style={{ fontSize: 18, verticalAlign: "baseline", marginRight: 5 }}
-        />
-        <span>Go Back</span>
-      </Link>
+      <Home />
     </Center>
   </Flex>
 );

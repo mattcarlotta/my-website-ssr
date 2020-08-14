@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const LinkComponent = ({
+  ariaLabel,
   asHref,
   className,
   children,
@@ -15,6 +16,7 @@ const LinkComponent = ({
 }) => (
   <Link href={href} as={asHref} prefetch={false} passHref>
     <a
+      aria-label={ariaLabel}
       data-test={dataTest}
       style={style}
       className={className}
@@ -27,6 +29,7 @@ const LinkComponent = ({
 );
 
 LinkComponent.propTypes = {
+  ariaLabel: PropTypes.string.isRequired,
   asHref: PropTypes.string,
   className: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,

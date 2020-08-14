@@ -39,7 +39,7 @@ const Header = () => (
       <nav css="margin: 0 auto;">
         <FlexCenter direction="row">
           <ListItem>
-            <Link href="/">
+            <Link ariaLabel="Navigate back to home page" href="/">
               <GoHome />
             </Link>
           </ListItem>
