@@ -5,18 +5,18 @@ import Flex from "~components/Layout/Flex";
 import ImageContainer from "~components/Layout/ImageContainer";
 import Head from "~components/Navigation/Header";
 import Link from "~components/Navigation/Link";
-import ProjectAeonPreview from "~images/projectaeonPreview.png";
-import ComposablePreview from "~images/composablePreview.png";
-import SJSIceTeamPreview from "~images/sjsiceteamPreview.png";
-import NextSSRKitPreview from "~images/nextssrkitPreview.png";
-import ReactSMDEPreview from "~images/reactsmdePreview.png";
-import AliasDirsPreview from "~images/aliasdirsPreview.png";
-import ReactHooksGuidePreview from "~images/reacthooksPreview.png";
-import SubskribblePreview from "~images/subskribblePreview.png";
-import MERNKitPreview from "~images/mernkitPreview.png";
-import YelpCampPreview from "~images/yelpcampPreview.png";
-import NVFCAppPreview from "~images/nvfcappPreview.png";
-import SSDTGenAppPreview from "~images/ssdtgenappPreview.png";
+import ProjectAeonPreview from "~images/projectaeonPreviewMin.png";
+import ComposablePreview from "~images/composablePreviewMin.png";
+import SJSIceTeamPreview from "~images/sjsiceteamPreviewMin.png";
+import NextSSRKitPreview from "~images/nextssrkitPreviewMin.png";
+import ReactSMDEPreview from "~images/reactsmdePreviewMin.png";
+import AliasDirsPreview from "~images/aliasdirsPreviewMin.png";
+import ReactHooksGuidePreview from "~images/reacthooksPreviewMin.png";
+import SubskribblePreview from "~images/subskribblePreviewMin.png";
+import MERNKitPreview from "~images/mernkitPreviewMin.png";
+import YelpCampPreview from "~images/yelpcampPreviewMin.png";
+import NVFCAppPreview from "~images/nvfcappPreviewMin.png";
+import SSDTGenAppPreview from "~images/ssdtgenappPreviewMin.png";
 
 const PROJECTS = [
   {

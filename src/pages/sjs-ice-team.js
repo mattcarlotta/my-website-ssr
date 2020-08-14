@@ -11,6 +11,7 @@ import Snapshot from "~components/Layout/Snapshot";
 import SnapshotContainer from "~components/Layout/SnapshotContainer";
 import Home from "~components/Navigation/Home";
 import Head from "~components/Navigation/Header";
+import SJSIceTeamPreviewMin from "~images/sjsiceteamPreviewMin.png";
 import SJSIceTeamPreview from "~images/sjsiceteamPreview.png";
 
 const SJSIceTeam = () => (
@@ -60,7 +61,7 @@ const SJSIceTeam = () => (
               <DetailHeadline>Snapshots:</DetailHeadline>
               <SnapshotContainer>
                 <Snapshot
-                  src={SJSIceTeamPreview}
+                  src={SJSIceTeamPreviewMin}
                   alt="sjsiceteam.png"
                   onClick={toggleModal}
                 />
