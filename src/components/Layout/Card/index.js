@@ -18,6 +18,20 @@ const Card = styled.div`
     height: 90%;
 
     border: 1px solid transparent;
+    -o-border-image: -o-linear-gradient(
+      bottom,
+      #73b9ff 0%,
+      #005193 50%,
+      #005193 100%
+    );
+    border-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#73b9ff),
+      color-stop(50%, #005193),
+      to(#005193)
+    );
     border-image: linear-gradient(
       to top,
       #73b9ff 0%,
@@ -46,6 +60,20 @@ const Card = styled.div`
 
     &:after {
       border: 2px solid transparent;
+      -o-border-image: -o-linear-gradient(
+        bottom,
+        #73b9ff 0%,
+        #005193 50%,
+        #005193 100%
+      );
+      border-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(#73b9ff),
+        color-stop(50%, #005193),
+        to(#005193)
+      );
       border-image: linear-gradient(
         to top,
         #73b9ff 0%,
