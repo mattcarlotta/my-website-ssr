@@ -23,11 +23,11 @@ const GlobalStyle = createGlobalStyle`
 		color: #fff;
   }
 
-  *, ::after, ::before {
+  *, :after, :before {
     box-sizing: border-box;
   }
 
-  ::-moz-focus-inner {
+  :-moz-focus-inner {
     border: 0;
   }
 

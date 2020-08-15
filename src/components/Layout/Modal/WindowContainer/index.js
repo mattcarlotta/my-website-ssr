@@ -11,7 +11,7 @@ const WindowContainer = styled.div`
   outline: 0;
   z-index: 100;
 
-  &::before {
+  :before {
     display: inline-block;
     width: 0;
     height: 100%;

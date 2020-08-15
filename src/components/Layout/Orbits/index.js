@@ -66,16 +66,16 @@ const OrbitsIcon = styled(Orbits)`
     box-sizing: border-box;
     box-shadow: 0 0 20px #00020c, inset 0 0 20px #2c4776;
 
-    ::after {
+    :after {
       transform: translateZ(90px);
     }
 
-    ::before {
+    :before {
       transform: translateZ(-90px);
     }
 
-    ::before,
-    ::after {
+    :before,
+    :after {
       content: "";
       display: block;
       position: absolute;

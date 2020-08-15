@@ -12,7 +12,7 @@ const Card = styled.div`
   color: #0096ff;
   box-shadow: 0px 8px 15px -8px rgba(0, 0, 0, 0.75);
 
-  ::after {
+  :after {
     content: "";
     display: block;
     height: 90%;
@@ -44,7 +44,7 @@ const Card = styled.div`
       opacity: 0.4;
     }
 
-    &::after {
+    &:after {
       border: 2px solid transparent;
       border-image: linear-gradient(
         to top,
