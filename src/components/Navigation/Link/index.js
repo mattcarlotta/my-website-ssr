@@ -9,8 +9,6 @@ const LinkComponent = ({
   children,
   dataTest,
   href,
-  onClick,
-  stopPropagation,
   style,
   target,
 }) => (
@@ -21,7 +19,6 @@ const LinkComponent = ({
       style={style}
       className={className}
       target={target}
-      onClick={stopPropagation ? e => e.stopPropagation() : onClick}
     >
       {children}
     </a>
@@ -35,16 +32,10 @@ LinkComponent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   dataTest: PropTypes.string,
   href: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  stopPropagation: PropTypes.bool,
   style: PropTypes.objectOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ),
   target: PropTypes.string,
-};
-
-LinkComponent.defaultProps = {
-  onClick: () => {},
 };
 
 const StyledLink = styled(LinkComponent)`
@@ -56,10 +47,11 @@ const StyledLink = styled(LinkComponent)`
   &:hover {
     cursor: pointer;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
   }
 
   &:focus {
+    color: #1295f3;
     outline: none !important;
     text-decoration: none;
   }

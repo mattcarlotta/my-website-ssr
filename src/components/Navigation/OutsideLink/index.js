@@ -11,10 +11,11 @@ const OutsideLink = styled.a.attrs(() => ({
   cursor: pointer;
 
   &:hover {
-    color: #ffffff;
+    color: #fff;
   }
 
   &:focus {
+    color: #1295f3;
     outline: none !important;
   }
 `;
