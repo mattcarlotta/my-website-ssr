@@ -9,6 +9,7 @@ const PreviewCard = styled.div`
   overflow: hidden;
   text-align: center;
   background-color: transparent;
+  border: 1px solid #16487a;
   color: #0096ff;
   cursor: pointer;
 

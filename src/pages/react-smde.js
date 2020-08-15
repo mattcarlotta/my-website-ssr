@@ -82,11 +82,7 @@ const ReactSMDE = () => (
                       onClick={() => toggleModal(`projects/reactsmde/${src}`)}
                     >
                       <CardTitle>{title}</CardTitle>
-                      <Image
-                        src={`projects/reactsmde/${src}Min`}
-                        alt={alt}
-                        styles="width: 100%;border-radius: 4px;"
-                      />
+                      <Image src={`projects/reactsmde/${src}Min`} alt={alt} />
                     </PreviewCard>
                   ))}
                 </Flex>
@@ -95,7 +91,7 @@ const ReactSMDE = () => (
           </Panel>
           <Modal isOpen={isOpen} maxWidth="2325px" onClick={toggleModal}>
             <Image
-              styles="width: 100%;max-width: 1800px; margin: 10px auto; display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
+              styles="width: 100%;max-width: 1800px;margin: 10px auto;display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
               src={selected}
               alt={selected}
             />

@@ -6,7 +6,7 @@ const SubHeadline = styled.p`
   letter-spacing: 1px;
   padding: 0;
   margin: 0;
-  text-shadow: 0px 0px 2px #1295f3;
+  font-weight: bold;
 `;
 
 export default SubHeadline;

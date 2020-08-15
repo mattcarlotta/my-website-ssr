@@ -91,7 +91,7 @@ const Projects = [
     href: "nvfc-app",
     description:
       "A standalone Linux application that creates a modifiable 2D curve of temp and fan speed points that automatically controls a Nvidia GPU's fan based on the GPU's temperature.",
-    src: "nvfcapp/nvfcappPreviewMin",
+    src: "nvfcapp/nvfcappLogoMin",
     alt: "nvfc-app-preview",
     ariaLabel: "Navigate to the Nvidia Fan Controller App project page.",
   },
@@ -100,7 +100,7 @@ const Projects = [
     href: "ssdtgen-app",
     description:
       "A standalone Mac OS application that builds and compiles custom SSDTs for X99, Z170, Z97, and H97 systems running Mac OS.",
-    src: "ssdtgenapp/ssdtgenappPreviewMin",
+    src: "ssdtgenapp/ssdtgenappLogoMin",
     alt: "sddtgen-app-preview",
     ariaLabel: "Navigate to the ssdtGen App project page.",
   },

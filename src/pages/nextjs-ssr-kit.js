@@ -70,7 +70,6 @@ const NextJSSSRKit = () => (
                     <Image
                       src="projects/nextssrkit/nextssrkitPreviewMin"
                       alt="nextjs-ssr-kit-preview"
-                      styles="width: 100%;border-radius: 4px;"
                     />
                   </PreviewCard>
                 </Flex>
@@ -79,7 +78,7 @@ const NextJSSSRKit = () => (
           </Panel>
           <Modal isOpen={isOpen} maxWidth="2325px" onClick={toggleModal}>
             <Image
-              styles="width: 100%;max-width: 1800px; margin: 10px auto; display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
+              styles="width: 100%;max-width: 1800px;margin: 10px auto;display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
               src={selected}
               alt={selected}
             />
