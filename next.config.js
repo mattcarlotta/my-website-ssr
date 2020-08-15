@@ -1,13 +1,16 @@
 require("./env");
+const withPWA = require("next-pwa");
+const withPlugins = require("next-compose-plugins");
 const openBrowser = require("react-dev-utils/openBrowser");
 const { plugins, rules } = require("./config");
 
 const { NODE_ENV, LOCALHOST } = process.env;
+const inDev = NODE_ENV === "development";
 
 /* opens a browser window */
-if (NODE_ENV === "development") openBrowser(LOCALHOST);
+if (inDev) openBrowser(LOCALHOST);
 
-module.exports = {
+const nextConfig = {
   exportPathMap: () => ({
     "/": { page: "/" },
     "/project-aeon": { page: "/project-aeon" },
@@ -34,3 +37,16 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = withPlugins(
+  [
+    withPWA,
+    {
+      pwa: {
+        dest: "public",
+        disable: inDev,
+      },
+    },
+  ],
+  nextConfig,
+);
