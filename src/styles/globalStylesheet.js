@@ -33,6 +33,15 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
+	@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 	@keyframes wave {
     0% {
       left: -60%;
@@ -44,7 +53,6 @@ const GlobalStyle = createGlobalStyle`
 
   @keyframes spinner-spin {
   	100% {
-  		-webkit-transform: rotate(360deg);
   		transform: rotate(360deg);
   	}
   }
@@ -63,23 +71,10 @@ const GlobalStyle = createGlobalStyle`
 
   @keyframes spin {
   	from {
-  		-webkit-transform: rotate(0);
   		transform: rotate(0);
   	}
   	to {
-  		-webkit-transform: rotate(359deg);
   		transform: rotate(359deg);
-  	}
-  }
-
-  @keyframes spin3D {
-  	from {
-  		-webkit-transform: rotate3d(0.5, 0.5, 0.5, 360deg);
-  		transform: rotate3d(0.5, 0.5, 0.5, 360deg);
-  	}
-  	to {
-  		-webkit-transform: rotate3d(0deg);
-  		transform: rotate3d(0deg);
   	}
   }
 
@@ -89,22 +84,6 @@ const GlobalStyle = createGlobalStyle`
   	}
   	100% {
   		width: 100px;
-  	}
-  }
-
-  @keyframes zoomOut {
-  	from {
-  		opacity: 1;
-  	}
-
-  	50% {
-  		opacity: 0;
-  		-webkit-transform: scale3d(0.3, 0.3, 0.3);
-  		transform: scale3d(0.3, 0.3, 0.3);
-  	}
-
-  	to {
-  		opacity: 0;
   	}
   }
 

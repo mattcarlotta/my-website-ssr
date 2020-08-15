@@ -62,6 +62,7 @@
     "babel-jest": "^26.3.0",
     "babel-plugin-react-remove-properties": "^0.3.0",
     "babel-plugin-styled-components": "^1.11.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "browserslist": "^4.14.0",
     "concurrently": "^5.3.0",
     "cypress": "^4.12.1",

@@ -16,6 +16,7 @@ module.exports = api => {
           preprocess: false,
         },
       ],
+      inProd && "transform-react-remove-prop-types",
       inProd &&
         !inStage && [
           "react-remove-properties",
