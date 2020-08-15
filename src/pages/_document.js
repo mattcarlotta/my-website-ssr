@@ -40,12 +40,7 @@ class CustomDocument extends Document {
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-        <link
-          rel="preload"
-          href="/fonts/Jura-Medium.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
+        <link rel="stylesheet" href="/fonts/Jura-Medium.ttf" />
       </Head>
       <body>
         <Main />
