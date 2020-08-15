@@ -13,7 +13,7 @@ const ModalContent = styled.div`
   text-align: left;
   z-index: 200;
   flex-direction: column;
-  animation: fadein 500ms 0s ease-in-out forwards;
+  animation: fadein 1000ms 0s ease-in-out forwards;
 `;
 
 export default ModalContent;
