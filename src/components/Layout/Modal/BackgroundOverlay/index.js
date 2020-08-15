@@ -8,7 +8,7 @@ const Background = styled.div`
   z-index: 3;
   position: fixed;
   touch-action: none;
-  background-color: rgba(56, 56, 56, 0.85);
+  background-color: rgba(56, 56, 56, 0.95);
 `;
 
 export default Background;

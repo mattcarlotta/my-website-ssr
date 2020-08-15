@@ -9,7 +9,15 @@ import ModalContent from "./ModalContent";
 import ModalContainer from "./ModalContainer";
 import WindowContainer from "./WindowContainer";
 
-const Modal = ({ children, isOpen, onClick, maxWidth }) => {
+const Modal = ({ children, isOpen, onClick }) => {
+  const [isLoaded, setLoaded] = React.useState();
+
+  const handleImageLoad = React.useCallback(() => setLoaded(true), []);
+
+  const handleRef = React.useCallback(node => {
+    if (node) node.onload = handleImageLoad;
+  }, []);
+
   React.useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "visible";
     return () => {
@@ -17,18 +25,22 @@ const Modal = ({ children, isOpen, onClick, maxWidth }) => {
     };
   }, [isOpen]);
 
+  React.useEffect(() => {
+    if (!isOpen) setLoaded(false);
+  }, [isOpen]);
+
   return isOpen
     ? createPortal(
         <div id="modal">
           <BackgroundOverlay />
           <WindowContainer>
-            <ModalContainer maxWidth={maxWidth}>
+            <ModalContainer>
               <ClickHandler closeModal={onClick}>
-                <ModalContent>
+                <ModalContent isLoaded={isLoaded}>
                   <CloseModalButton id="close-modal" onClick={onClick}>
                     <FaTimes />
                   </CloseModalButton>
-                  {children}
+                  {React.cloneElement(children, { innerRef: handleRef })}
                 </ModalContent>
               </ClickHandler>
             </ModalContainer>
@@ -43,7 +55,6 @@ Modal.propTypes = {
   children: PropTypes.node.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onClick: PropTypes.func,
-  maxWidth: PropTypes.string,
 };
 
 export default Modal;

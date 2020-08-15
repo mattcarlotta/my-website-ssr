@@ -13,6 +13,7 @@ const ModalContent = styled.div`
   text-align: left;
   z-index: 200;
   flex-direction: column;
+  visibility: ${({ isLoaded }) => (isLoaded ? "visible" : "hidden")};
 `;
 
 export default ModalContent;
