@@ -1,13 +1,12 @@
 import { createGlobalStyle } from "styled-components";
-import JuraMedium from "~styles/assets/fonts/Jura-Medium.ttf";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Jura Medium";
     font-style: normal;
     font-weight: normal;
-    font-display: fallback;
-    src: url(${JuraMedium}) format("truetype");
+    font-display: swap;
+    src: url("/fonts/Jura-Medium.ttf") format("truetype");
   }
 
   #__next, body, html {

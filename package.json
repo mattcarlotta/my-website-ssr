@@ -79,7 +79,6 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-watch": "^7.0.0",
-    "file-loader": "^6.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
@@ -97,7 +96,6 @@
     "stylelint": "^13.6.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.18.0",
-    "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpackbar": "^4.0.0"
