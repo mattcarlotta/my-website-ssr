@@ -12,11 +12,7 @@ import WindowContainer from "./WindowContainer";
 const Modal = ({ children, isOpen, onClick }) => {
   const [isLoaded, setLoaded] = React.useState();
 
-  const handleImageLoad = React.useCallback(() => setLoaded(true), []);
-
-  const handleRef = React.useCallback(node => {
-    if (node) node.onload = handleImageLoad;
-  }, []);
+  const handleImageLoaded = React.useCallback(() => setLoaded(true), []);
 
   React.useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "visible";
@@ -40,7 +36,7 @@ const Modal = ({ children, isOpen, onClick }) => {
                   <CloseModalButton id="close-modal" onClick={onClick}>
                     <FaTimes />
                   </CloseModalButton>
-                  {React.cloneElement(children, { innerRef: handleRef })}
+                  {React.cloneElement(children, { handleImageLoaded })}
                 </ModalContent>
               </ClickHandler>
             </ModalContainer>

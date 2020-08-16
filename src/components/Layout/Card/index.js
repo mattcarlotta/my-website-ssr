@@ -16,8 +16,8 @@ const Card = styled.div`
     content: "";
     display: block;
     height: 90%;
-
-    border: 1px solid transparent;
+    border-width: 1px;
+    border-style: solid;
     -o-border-image: -o-linear-gradient(
       bottom,
       #73b9ff 0%,
@@ -59,7 +59,8 @@ const Card = styled.div`
     }
 
     &:after {
-      border: 2px solid transparent;
+      border-width: 2px;
+      border-style: solid;
       -o-border-image: -o-linear-gradient(
         bottom,
         #73b9ff 0%,
