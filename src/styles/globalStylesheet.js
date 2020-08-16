@@ -17,10 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: "Jura Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-		background: url("./bg.webp");
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center;
+		background: url("./bg.webp") no-repeat fixed center;
 		background-color: #010007;
 		color: #fff;
   }
