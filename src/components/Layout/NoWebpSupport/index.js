@@ -7,8 +7,7 @@ const NoWebpSupport = () => {
       "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA";
     img.onerror = () => {
       document.body.style.background =
-        "url('bgMin.png') center center no-repeat fixed";
-      document.body.style.backgroundSize = "cover";
+        "url('bg.png') center center no-repeat fixed";
     };
   }, []);
 
