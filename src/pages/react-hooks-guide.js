@@ -17,8 +17,8 @@ const ReactHooksGuide = () => (
     snapshotdirectory="reacthooks"
     snapshots={[
       {
-        src: "reacthooksLanding",
-        alt: "landing-preview",
+        src: "reacthooksHome",
+        alt: "home-preview",
         title: "Home",
       },
       {
@@ -28,7 +28,7 @@ const ReactHooksGuide = () => (
       },
       {
         src: "reacthooksExamples",
-        alt: "demo-preview",
+        alt: "examples-preview",
         title: "Examples",
       },
     ]}

@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const { statSync } = require("fs");
 const { resolve } = require("path");
 
-const { DATABASE, NODE_ENV } = process.env;
+const { NODE_ENV } = process.env;
 const path = `env/.env.${NODE_ENV}`;
 
 try {
@@ -20,13 +20,11 @@ try {
     );
   }
 } catch (error) {
-  if (!DATABASE) {
-    console.log(
-      `\n${chalk.rgb(255, 255, 255).bgRgb(255, 17, 0)(" ERROR ")} ${chalk.red(
-        `Missing ${NODE_ENV} environment variables!`,
-      )}\n`,
-    );
-    process.exit(1);
-  }
+  console.log(
+    `\n${chalk.rgb(255, 255, 255).bgRgb(255, 17, 0)(" ERROR ")} ${chalk.red(
+      `Missing ${NODE_ENV} environment variables!`,
+    )}\n`,
+  );
+  process.exit(1);
 }
 /* eslint-enable */

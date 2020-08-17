@@ -29,7 +29,7 @@ const Page = ({
     <ModalContainer>
       {(isOpen, selected, toggleModal) => (
         <Project>
-          <PanelTitle>{head.title}</PanelTitle>
+          <PanelTitle data-testid="panel-title">{head.title}</PanelTitle>
           <Panel>
             <Text>
               <DetailHeadline>Details:</DetailHeadline>
@@ -47,6 +47,7 @@ const Page = ({
                 <Flex justify="center" wrap="wrap">
                   {snapshots.map(({ src, alt, title }) => (
                     <PreviewCard
+                      data-testid={title}
                       key={src}
                       onClick={() =>
                         toggleModal(`projects/${snapshotdirectory}/${src}`)

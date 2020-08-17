@@ -77,7 +77,7 @@ const SJSIceTeam = () => (
       {
         src: "availability/sjsiceteamAvailability",
         alt: "member-availability-preview",
-        title: "Member - Availabilty",
+        title: "Member - Availability",
       },
       {
         src: "settings/sjsiceteamSettings",

@@ -15,7 +15,7 @@ const LinkComponent = ({
   <Link href={href} as={asHref} prefetch={false} passHref>
     <a
       aria-label={ariaLabel}
-      data-test={dataTest}
+      data-testid={dataTest}
       style={style}
       className={className}
       target={target}

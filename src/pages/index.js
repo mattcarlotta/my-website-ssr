@@ -10,9 +10,15 @@ import Link from "~components/Navigation/Link";
 const Home = () => (
   <>
     <Head title="Home" url="/" description="My personal website." />
-    <Flex justify="center" wrap="wrap">
+    <Flex data-testid="home-page" justify="center" wrap="wrap">
       {Projects.map(({ title, href, src, alt, ariaLabel }) => (
-        <Link ariaLabel={ariaLabel} key={href} padding="0px" href={`/${href}`}>
+        <Link
+          dataTest={title}
+          ariaLabel={ariaLabel}
+          key={href}
+          padding="0px"
+          href={`/${href}`}
+        >
           <Card>
             <CardTitle>{title}</CardTitle>
             <Bars />

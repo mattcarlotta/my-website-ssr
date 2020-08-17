@@ -28,12 +28,12 @@ const Modal = ({ children, isOpen, onClick }) => {
   return isOpen
     ? createPortal(
         <div id="modal">
-          <BackgroundOverlay />
+          <BackgroundOverlay data-testid="background-overlay" />
           <WindowContainer>
             <ModalContainer>
               <ClickHandler closeModal={onClick}>
                 <ModalContent isLoaded={isLoaded}>
-                  <CloseModalButton id="close-modal" onClick={onClick}>
+                  <CloseModalButton data-testid="close-modal" onClick={onClick}>
                     <FaTimes />
                   </CloseModalButton>
                   {React.cloneElement(children, { handleImageLoaded })}

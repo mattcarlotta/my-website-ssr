@@ -13,16 +13,19 @@ import SubHeadline from "~components/Layout/SubHeadline";
 
 const FOOTERLINKS = [
   {
+    dataTest: "mail",
     Icon: GoMail,
     link: "mailto:matt@mattcarlotta.sh",
     description: "My email address",
   },
   {
+    dataTest: "github",
     Icon: RiGithubLine,
     link: "https://github.com/mattcarlotta",
     description: "My github repository",
   },
   {
+    dataTest: "linkedin",
     Icon: FiLinkedin,
     link: "https://www.linkedin.com/in/mattcarlotta/",
     description: "My LinkedIn profile",
@@ -39,13 +42,21 @@ const Header = () => (
       <nav css="margin: 0 auto;">
         <FlexCenter direction="row">
           <ListItem>
-            <Link ariaLabel="Navigate back to home page" href="/">
+            <Link
+              dataTest="go-home"
+              ariaLabel="Navigate back to home page"
+              href="/"
+            >
               <GoHome />
             </Link>
           </ListItem>
-          {FOOTERLINKS.map(({ description, Icon, link }) => (
+          {FOOTERLINKS.map(({ dataTest, description, Icon, link }) => (
             <ListItem key={description}>
-              <OutsideLink aria-label={description} href={link}>
+              <OutsideLink
+                data-testid={dataTest}
+                aria-label={description}
+                href={link}
+              >
                 <Icon className="icon" />
               </OutsideLink>
             </ListItem>
@@ -53,7 +64,7 @@ const Header = () => (
         </FlexCenter>
       </nav>
       <Orbits />
-      <Center>
+      <Center data-testid="header">
         <Headline>MATT CARLOTTA</Headline>
         <SubHeadline>fullstack web developer and commercial artist</SubHeadline>
       </Center>

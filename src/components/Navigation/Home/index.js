@@ -4,7 +4,11 @@ import Link from "~components/Navigation/Link";
 
 const Home = () => (
   <Center>
-    <Link ariaLabel="Navigate back to home page" href="/">
+    <Link
+      dataTest="navigate-home"
+      ariaLabel="Navigate back to home page"
+      href="/"
+    >
       <GoHome style={{ marginRight: 5, verticalAlign: "baseline" }} />
       Go Home
     </Link>

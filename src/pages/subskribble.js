@@ -54,12 +54,12 @@ const Subskribble = () => (
       {
         src: "subskribbleSubRegister",
         alt: "subcriber-registration-preview",
-        title: "Subcriber Registration",
+        title: "Subscriber Registration",
       },
       {
         src: "subskribbleSubs",
         alt: "subscribers-preview",
-        title: "Subcribers",
+        title: "Subscribers",
       },
       {
         src: "subskribbleTransactions",

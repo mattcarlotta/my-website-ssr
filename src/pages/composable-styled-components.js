@@ -30,8 +30,8 @@ const ComposableStyledComponents = () => (
     snapshotdirectory="composable"
     snapshots={[
       {
-        src: "composableLanding",
-        alt: "landing-preview",
+        src: "composableHome",
+        alt: "home-preview",
         title: "Home",
       },
       {

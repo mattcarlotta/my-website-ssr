@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { act } from "react-dom/test-utils";
 import Modal from "../index";
 
@@ -59,3 +60,4 @@ describe("Modal", () => {
     expect(wrapper.find("ModalContainer").exists()).toBeFalsy();
   });
 });
+/* eslint-enable react/prop-types */

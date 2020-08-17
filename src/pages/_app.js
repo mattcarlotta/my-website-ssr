@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }) => (
     </Head>
     <Main>
       <Header />
-      <Body>
+      <Body data-testid="body">
         <Component {...pageProps} />
       </Body>
       <Footer />

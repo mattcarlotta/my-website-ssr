@@ -24,6 +24,7 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
         <Info data-testid="location">
           <RiMapPin2Line />
           <a
+            data-testid="location-link"
             href={location}
             rel="noopener noreferrer"
             target="_blank"
@@ -36,6 +37,7 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
       <Info data-testid="source">
         <AiOutlineCode />
         <a
+          data-testid="source-link"
           href={source}
           rel="noopener noreferrer"
           target="_blank"
