@@ -17,6 +17,51 @@ const Subskribble = () => (
     snapshotdirectory="subskribble"
     snapshots={[
       {
+        src: "subskribbleCreatePlan",
+        alt: "create-plan-preview",
+        title: "Create Plan",
+      },
+      {
+        src: "subskribbleCreateTemplate",
+        alt: "create-template-preview",
+        title: "Create Template",
+      },
+      {
+        src: "subskribbleDashboard",
+        alt: "dashboard-preview",
+        title: "Dashboard",
+      },
+      {
+        src: "subskribbleNotes",
+        alt: "notifications-preview",
+        title: "Notifications",
+      },
+      {
+        src: "subskribbleProfile",
+        alt: "profile-preview",
+        title: "Profile",
+      },
+      {
+        src: "subskribbleRefundTrans",
+        alt: "refund-transactions-preview",
+        title: "Refund Transactions",
+      },
+      {
+        src: "subskribbleSendMessage",
+        alt: "send-message-preview",
+        title: "Send Message",
+      },
+      {
+        src: "subskribbleSubRegister",
+        alt: "subcriber-registration-preview",
+        title: "Subcriber Registration",
+      },
+      {
+        src: "subskribbleSubs",
+        alt: "subscribers-preview",
+        title: "Subcribers",
+      },
+      {
         src: "subskribbleTransactions",
         alt: "subskribble-transactions-preview",
         title: "Transactions",
