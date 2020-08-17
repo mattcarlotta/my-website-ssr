@@ -10,7 +10,7 @@ const ReactHooksGuide = () => (
         "An educational website to help up-and-coming developers understand React’s newly introduced hooks.",
     }}
     filedetails={{
-      active: true,
+      active: false,
       status: "Decommissioned",
       source: "https://github.com/mattcarlotta/react-hooks",
     }}
