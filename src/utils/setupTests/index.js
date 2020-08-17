@@ -4,7 +4,8 @@ import { configure, mount, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import "jest-styled-components";
 import "jest-enzyme";
-import { withRouterContext } from "~utils/testingUtils";
+
+const flushPromises = () => new Promise(setImmediate);
 
 configure({ adapter: new Adapter() });
 
@@ -30,7 +31,7 @@ global.HTMLAnchorElement = window.HTMLAnchorElement;
 global.mount = mount;
 global.shallow = shallow;
 global.React = require("react");
-global.withRouterContext = withRouterContext;
+global.flushPromises = flushPromises;
 
 Object.keys(document.defaultView).forEach(property => {
   if (typeof global[property] === "undefined") {

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import styled from "styled-components";
 import CardTitle from "~components/Layout/CardTitle";
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import FlexCenter from "~components/Layout/FlexCenter";
 
 const Solar = ({ className }) => (
-  <FlexCenter className={className}>
+  <FlexCenter data-testid="solar-system" className={className}>
     <div className="solar-system">
       <div className="earth-orbit orbit">
         <div className="planet earth" />

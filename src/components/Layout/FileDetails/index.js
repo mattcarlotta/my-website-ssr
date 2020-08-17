@@ -12,16 +12,16 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
     }}
   >
     <div css="margin-bottom: 20px; padding-left: 20px;">
-      <Info>
+      <Info data-testid="status">
         <BsFillCircleFill style={{ color: active ? "limegreen" : "#2c4776" }} />
         {status}
       </Info>
-      <Info>
+      <Info data-testid="filename">
         <AiOutlineFolderOpen />
         {fileName}
       </Info>
       {location && (
-        <Info>
+        <Info data-testid="location">
           <RiMapPin2Line />
           <a
             href={location}
@@ -33,7 +33,7 @@ const FileDetails = ({ active, location, fileName, source, status }) => (
           </a>
         </Info>
       )}
-      <Info>
+      <Info data-testid="source">
         <AiOutlineCode />
         <a
           href={source}

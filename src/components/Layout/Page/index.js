@@ -35,15 +35,15 @@ const Page = ({
               <DetailHeadline>Details:</DetailHeadline>
               <FileDetails {...filedetails} fileName={head.title} />
               <DetailHeadline>Description:</DetailHeadline>
-              <SubTitle>{description}</SubTitle>
+              <SubTitle data-testid="description">{description}</SubTitle>
               <DetailHeadline>Tech Specs:</DetailHeadline>
-              <ul>
+              <ul data-testid="tech">
                 {tech.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
               {snapshotdirectory && <DetailHeadline>Snapshots:</DetailHeadline>}
-              <SnapshotContainer>
+              <SnapshotContainer data-testid="snapshots">
                 <Flex justify="center" wrap="wrap">
                   {snapshots.map(({ src, alt, title }) => (
                     <PreviewCard

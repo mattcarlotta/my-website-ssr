@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const Projects = [
   {
     title: "Project Aeon (working title)",

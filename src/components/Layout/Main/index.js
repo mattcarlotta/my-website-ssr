@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import styled from "styled-components";
 
 const Main = styled.main`

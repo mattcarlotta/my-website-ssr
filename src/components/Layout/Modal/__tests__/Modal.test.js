@@ -1,5 +1,19 @@
-import Image from "~components/Layout/Image";
+import { act } from "react-dom/test-utils";
 import Modal from "../index";
+
+const image = new global.Image();
+image.src =
+  "data:image/png;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAQAAAAfQ//73v/+BiOh/AAA=";
+
+const Image = ({ alt, handleImageLoaded, handleImageRef, src }) => (
+  <img
+    ref={handleImageRef}
+    src={src}
+    alt={alt}
+    onLoad={handleImageLoaded}
+    onError={handleImageLoaded}
+  />
+);
 
 const onClick = jest.fn();
 
@@ -11,11 +25,7 @@ const initProps = {
 
 const wrapper = mount(
   <Modal {...initProps}>
-    <Image
-      styles="width: 100%;max-width: 1800px;margin: 10px auto;display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
-      src="/example.png"
-      alt="example"
-    />
+    <Image src={image} alt="example" />
   </Modal>,
 );
 
@@ -24,9 +34,17 @@ describe("Modal", () => {
     expect(wrapper.find("ModalContainer").exists()).toBeFalsy();
   });
 
-  it("renders a modal with some sample content without errors", () => {
+  it("renders a modal with some sample content without errors", async () => {
     wrapper.setProps({ isOpen: true });
-    expect(wrapper.find("ModalContainer").exists()).toBeTruthy();
+
+    await act(async () => {
+      wrapper.find("img").props().onLoad();
+      await flushPromises();
+      wrapper.update();
+
+      expect(wrapper.find("ModalContainer").exists()).toBeTruthy();
+      expect(wrapper.find("ModalContent").props().isLoaded).toBeTruthy();
+    });
   });
 
   it("calls a passed in 'onClick' prop function", () => {

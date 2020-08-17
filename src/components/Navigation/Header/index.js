@@ -3,11 +3,10 @@ import PropTypes from "prop-types";
 
 const { LOCALHOST } = process.env;
 
-const Header = ({ children, description, keywords, title, type, url }) => (
+const Header = ({ children, description, title, type, url }) => (
   <Head>
     <title>{title} - Matt Carlotta</title>
     <link rel="canonical" href={`${LOCALHOST}${url}`} />
-    {keywords && <meta name="keywords" content={keywords} />}
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={`${LOCALHOST}${url}`} />
@@ -19,10 +18,6 @@ const Header = ({ children, description, keywords, title, type, url }) => (
 Header.propTypes = {
   children: PropTypes.node,
   description: PropTypes.string,
-  keywords: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.string),
-    PropTypes.string,
-  ]),
   title: PropTypes.string.isRequired,
   url: PropTypes.string,
   type: PropTypes.string,

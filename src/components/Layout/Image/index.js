@@ -12,7 +12,7 @@ const Image = ({
 }) => {
   const [error, setError] = React.useState(false);
 
-  const onSuccess = React.useCallback(() => {
+  const onLoad = React.useCallback(() => {
     handleImageLoaded();
   }, []);
 
@@ -23,13 +23,13 @@ const Image = ({
 
   const handleImageRef = React.useCallback(node => {
     if (node) {
-      node.onload = onSuccess;
+      node.onload = onLoad;
       node.onerror = onError;
     }
   }, []);
 
   return (
-    <picture css={containerStyle} onClick={onClick}>
+    <picture data-testid="picture" css={containerStyle} onClick={onClick}>
       {!error ? (
         <>
           <source
@@ -41,6 +41,8 @@ const Image = ({
             ref={handleImageRef}
             css={styles}
             src={`/${src}.png`}
+            onLoad={onLoad}
+            onError={onError}
             alt={alt}
           />
         </>
@@ -60,6 +62,7 @@ Image.propTypes = {
   styles: PropTypes.string,
 };
 
+/* istanbul ignore next */
 Image.defaultProps = {
   handleImageLoaded: () => {},
   onClick: () => {},

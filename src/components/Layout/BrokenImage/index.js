@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { AiOutlineFileImage } from "react-icons/ai";
 
 const Image = ({ className }) => (
-  <div className={className}>
+  <div data-testid="broken-image" className={className}>
     <AiOutlineFileImage />
     <p>Unable to load image</p>
   </div>
