@@ -11,8 +11,7 @@ const ReactHooksGuide = () => (
     }}
     filedetails={{
       active: true,
-      location: "https://react-hooks.mattcarlotta.io",
-      status: "Archived",
+      status: "Decommissioned",
       source: "https://github.com/mattcarlotta/react-hooks",
     }}
     snapshotdirectory="reacthooks"
