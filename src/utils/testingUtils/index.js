@@ -2,8 +2,6 @@
 import { createElement, cloneElement } from "react";
 import { mount } from "enzyme";
 import { RouterContext } from "next/dist/next-server/lib/router-context";
-import { Provider } from "react-redux";
-import { store } from "~store";
 
 /**
  * Factory function to create a mounted RouterContext wrapper for a React component
@@ -26,11 +24,9 @@ export const withRouterContext = (
 ) => {
   const wrapper = mount(
     createElement(props => (
-      <Provider store={store}>
-        <RouterContext.Provider value={router}>
-          {cloneElement(Component, props)}
-        </RouterContext.Provider>
-      </Provider>
+      <RouterContext.Provider value={router}>
+        {cloneElement(Component, props)}
+      </RouterContext.Provider>
     )),
     options,
   );

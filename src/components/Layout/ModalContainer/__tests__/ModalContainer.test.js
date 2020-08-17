@@ -2,10 +2,14 @@ import ModalContainer from "../index";
 
 const wrapper = mount(
   <ModalContainer>
-    {(_, toggleModal) => (
-      <button type="button" onClick={toggleModal}>
-        Click me
-      </button>
+    {(isOpen, selected, toggleModal) => (
+      <>
+        <button type="button" onClick={() => toggleModal("abc")}>
+          Click me
+        </button>
+        <span data-testid="isopen">{String(isOpen)}</span>
+        <span data-testid="selected">{selected}</span>
+      </>
     )}
   </ModalContainer>,
 );
@@ -17,7 +21,11 @@ describe("Modal Container", () => {
 
   it("toggled isOpen state", () => {
     wrapper.find("button").simulate("click");
+    expect(wrapper.find("[data-testid='isopen']").text()).toEqual("true");
+    expect(wrapper.find("[data-testid='selected']").text()).toEqual("abc");
 
-    expect(wrapper.state("isOpen")).toBeTruthy();
+    wrapper.find("button").simulate("click");
+    expect(wrapper.find("[data-testid='isopen']").text()).toEqual("false");
+    expect(wrapper.find("[data-testid='selected']").text()).toEqual("");
   });
 });

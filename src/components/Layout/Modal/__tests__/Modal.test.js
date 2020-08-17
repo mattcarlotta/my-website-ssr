@@ -1,3 +1,4 @@
+import Image from "~components/Layout/Image";
 import Modal from "../index";
 
 const onClick = jest.fn();
@@ -10,7 +11,11 @@ const initProps = {
 
 const wrapper = mount(
   <Modal {...initProps}>
-    <span>Hello</span>
+    <Image
+      styles="width: 100%;max-width: 1800px;margin: 10px auto;display: block;box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);border-radius: 4px;"
+      src="/example.png"
+      alt="example"
+    />
   </Modal>,
 );
 

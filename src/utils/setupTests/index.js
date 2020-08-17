@@ -4,7 +4,6 @@ import { configure, mount, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import "jest-styled-components";
 import "jest-enzyme";
-import mockApp from "~utils/__mocks__/mockAxios.js";
 import { withRouterContext } from "~utils/testingUtils";
 
 configure({ adapter: new Adapter() });
@@ -28,7 +27,6 @@ global.document = document;
 global.window = document.defaultView;
 global.HTMLElement = window.HTMLElement;
 global.HTMLAnchorElement = window.HTMLAnchorElement;
-global.mockApp = mockApp;
 global.mount = mount;
 global.shallow = shallow;
 global.React = require("react");

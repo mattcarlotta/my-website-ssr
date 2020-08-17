@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default styled.div`
+const Flex = styled.div`
   flex-direction: ${({ direction }) => direction || "row"};
   display: flex;
   align-items: center;
@@ -9,3 +9,5 @@ export default styled.div`
   flex-wrap: ${({ wrap }) => (wrap ? "wrap" : "nowrap")};
   justify-content: ${({ justify }) => justify || "start"};
 `;
+
+export default Flex;
