@@ -14,7 +14,7 @@ import SubHeadline from "~components/Layout/SubHeadline";
 const FOOTERLINKS = [
   {
     Icon: GoMail,
-    link: "mailto:carlotta.matt@gmail.com",
+    link: "mailto:matt@mattcarlotta.sh",
     description: "My email address",
   },
   {
