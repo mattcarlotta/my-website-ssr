@@ -1,4 +1,4 @@
-context("Home Page", () => {
+context("Not Found Page", () => {
   beforeEach(() => {
     cy.visit("/notfound", { failOnStatusCode: false });
   });

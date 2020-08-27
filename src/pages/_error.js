@@ -1,11 +1,10 @@
-import React from "react";
 import Head from "next/head";
 import Center from "~components/Layout/Center";
 import Flex from "~components/Layout/Flex";
 import Home from "~components/Navigation/Home";
 
 const NotFound = () => (
-  <Flex justify="center" style={{ height: "50vh" }} id="notfound">
+  <Flex justify="center" style={{ height: "50vh" }}>
     <Head>
       <title>Server Error - Matt Carlotta</title>
     </Head>

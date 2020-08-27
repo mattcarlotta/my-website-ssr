@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import Center from "~components/Layout/Center";
 import Flex from "~components/Layout/Flex";
@@ -9,7 +8,6 @@ const NotFound = () => (
     data-testid="not-found-page"
     justify="center"
     style={{ height: "50vh" }}
-    id="notfound"
   >
     <Head>
       <title>Not Found - Matt Carlotta</title>
