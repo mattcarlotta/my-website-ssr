@@ -11,14 +11,14 @@ context("Composable Styled Components Project Page", () => {
   });
 
   it("displays the project details", () => {
-    cy.get("[data-testid='status']").should("have.text", "In Development");
+    cy.get("[data-testid='status']").should("have.text", "In Orbit");
     cy.get("[data-testid='filename']").should(
       "have.text",
       "Composable Styled Components",
     );
     cy.get("[data-testid='location-link']").should(
       "have.text",
-      "https://composable-styled-components.vercel.app",
+      "https://composable.mattcarlotta.sh",
     );
     cy.get("[data-testid='location-link']").should(
       "have.attr",
@@ -44,15 +44,15 @@ context("Composable Styled Components Project Page", () => {
     cy.get("[data-testid='tech']").should("have.length", 1);
   });
 
-  it("displays the 3 project snapshot thumbnails", () => {
+  it("displays the 5 project snapshot thumbnails", () => {
     cy.get("[data-testid='snapshots']").should("have.length", 1);
     cy.get("[data-testid='snapshots']")
       .find("picture")
-      .should("have.length", 3);
+      .should("have.length", 5);
   });
 
   it("displays a modal for individual project snapshots", () => {
-    ["Home", "API", "Demos"].forEach(id => {
+    ["Home", "API", "Demos", "Releases", "Search"].forEach(id => {
       cy.get(`[data-testid='${id}']`).click();
 
       const src = `/projects/composable/composable${id.replace(/ /g, "")}`;

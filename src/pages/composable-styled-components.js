@@ -13,7 +13,26 @@ const ComposableStyledComponents = () => (
         >
           styled-components
         </OutsideLink>
-        . The documentation website was built with this package!
+        . The package is created using a custom RollupJS configuration, is
+        backed by 100% test coverage and is published to&nbsp;
+        <OutsideLink
+          aria-label="Navigate to npm composable-styled-components package page"
+          href="https://www.npmjs.com/package/composable-styled-components"
+          style={{ padding: 0 }}
+        >
+          npm
+        </OutsideLink>
+        . Meanwhile, the documentation website is built in Typescript, optimized
+        for SEO with&nbsp;
+        <OutsideLink
+          aria-label="Navigate to Algolia home page"
+          href="https://www.algolia.com"
+          style={{ padding: 0 }}
+        >
+          Algolia
+        </OutsideLink>
+        &nbsp;search engine crawler integration, and utilizes the
+        composable-styled-components package to construct reusable components.
       </>
     }
     head={{
@@ -23,8 +42,8 @@ const ComposableStyledComponents = () => (
     }}
     filedetails={{
       active: true,
-      location: "https://composable-styled-components.vercel.app",
-      status: "In Development",
+      location: "https://composable.mattcarlotta.sh",
+      status: "In Orbit",
       source: "https://github.com/mattcarlotta/composable-styled-components",
     }}
     snapshotdirectory="composable"
@@ -44,8 +63,29 @@ const ComposableStyledComponents = () => (
         alt: "demo-preview",
         title: "Demos",
       },
+      {
+        src: "composableReleases",
+        alt: "releases-preview",
+        title: "Releases",
+      },
+      {
+        src: "composableSearch",
+        alt: "search-preview",
+        title: "Search",
+      },
     ]}
-    tech={["Babel", "Enzyme", "ReactJS", "NextJS", "NPM", "Rollup", "Webpack"]}
+    tech={[
+      "Babel",
+      "Cypress",
+      "Enzyme",
+      "Jest",
+      "ReactJS",
+      "Typescript (website)",
+      "NextJS",
+      "NPM",
+      "Rollup",
+      "Webpack",
+    ]}
   />
 );
 
