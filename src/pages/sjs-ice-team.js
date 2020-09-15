@@ -29,7 +29,9 @@ const SJSIceTeam = () => (
         utilizes NextJS for SEO, while the microservices utilize NodeJS with
         ExpressJS. All services utilizes Github Actions for pre-flight unit and
         e2e tests; as well as, continuous integrations with a remote Linux
-        server running PM2 processes.
+        server running PM2 processes. The application is designed for and
+        supports: Chrome, Firefox, IE11, and Safari (for mobile, pad, and
+        desktop screens).
       </>
     }
     head={{
