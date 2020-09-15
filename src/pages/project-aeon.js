@@ -2,12 +2,12 @@ import Page from "~components/Layout/Page";
 
 const ProjectAeon = () => (
   <Page
-    description="A better application to ask web development questions and use integrated tools to answer them."
+    description="Work in progress: An application to ask and/or review web development code that utilizes integrated tools to run and share them. The aim of this project is to integrate development tools like: Babel REPL/Codesandbox/Codepen/JS Fiddle/Typescript playground (and so on) into a central hub for teams or individuals to share their code quickly and effectively. In addition, the website will be optimized for SEO and will prioritize questions and answers by user up/down votes. Open to the public, open source, and free to use."
     head={{
       title: "Project Aeon",
       url: "/project-aeon",
       description:
-        "A better app to ask web development questions and use integrated tools to answer them.",
+        "A better app to ask web development questions and use integrated tools to share them.",
     }}
     filedetails={{
       active: true,

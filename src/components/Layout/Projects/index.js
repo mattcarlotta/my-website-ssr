@@ -10,14 +10,6 @@ const Projects = [
     ariaLabel: "Navigate to the Project Aeon project page.",
   },
   {
-    title: "Composable Styled Components",
-    href: "composable-styled-components",
-    description: "A lightweight composable solution for styled-components.",
-    src: "composable/composablePreviewMin",
-    alt: "composable-preview",
-    ariaLabel: "Navigate to the Composable Styled Components project page.",
-  },
-  {
     title: "SJS Ice Team",
     href: "sjs-ice-team",
     description:
@@ -25,6 +17,32 @@ const Projects = [
     src: "sjsit/sjsiceteamPreviewMin",
     alt: "sjsiceteam-preview",
     ariaLabel: "Navigate to the SJS Ice Team project page.",
+  },
+  {
+    title: "React Hooks Guide",
+    href: "react-hooks-guide",
+    description:
+      "An educational website to help up-and-coming developers understand React’s newly introduced hooks.",
+    src: "reacthooks/reacthooksPreviewMin",
+    alt: "react-hooks-guide-preview",
+    ariaLabel: "Navigate to the React Hooks Guide project page.",
+  },
+  {
+    title: "Subskribble",
+    href: "subskribble",
+    description:
+      "A web application to create, manage, and send personalized updates to a list of subscribers.",
+    src: "subskribble/subskribblePreviewMin",
+    alt: "subskribble-preview",
+    ariaLabel: "Navigate to the Subskribble project page.",
+  },
+  {
+    title: "Composable Styled Components",
+    href: "composable-styled-components",
+    description: "A lightweight composable solution for styled-components.",
+    src: "composable/composablePreviewMin",
+    alt: "composable-preview",
+    ariaLabel: "Navigate to the Composable Styled Components project page.",
   },
   {
     title: "NextJS SSR Kit",
@@ -50,24 +68,6 @@ const Projects = [
     src: "aliasdirs/aliasdirsPreviewMin",
     alt: "alias-dirs-preview",
     ariaLabel: "Navigate to the Alias Dirs project page.",
-  },
-  {
-    title: "React Hooks Guide",
-    href: "react-hooks-guide",
-    description:
-      "An educational website to help up-and-coming developers understand React’s newly introduced hooks.",
-    src: "reacthooks/reacthooksPreviewMin",
-    alt: "react-hooks-guide-preview",
-    ariaLabel: "Navigate to the React Hooks Guide project page.",
-  },
-  {
-    title: "Subskribble",
-    href: "subskribble",
-    description:
-      "A web application to create, manage, and send personalized updates to a list of subscribers.",
-    src: "subskribble/subskribblePreviewMin",
-    alt: "subskribble-preview",
-    ariaLabel: "Navigate to the Subskribble project page.",
   },
   {
     title: "Fullstack M.E.R.N. Kit",

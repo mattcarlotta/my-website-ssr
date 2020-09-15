@@ -27,7 +27,9 @@ const SJSIceTeam = () => (
         </OutsideLink>
         , and a database optimization microservice. The main application
         utilizes NextJS for SEO, while the microservices utilize NodeJS with
-        ExpressJS.
+        ExpressJS. All services utilizes Github Actions for pre-flight unit and
+        e2e tests; as well as, continuous integrations with a remote Linux
+        server running PM2 processes.
       </>
     }
     head={{
@@ -101,12 +103,14 @@ const SJSIceTeam = () => (
       },
     ]}
     tech={[
+      "Github Actions",
       "MongoDB",
       "ReactJS (w/ReduxJS)",
       "NextJS",
       "ExpressJS",
       "NodeJS",
       "Nginx",
+      "PM2",
     ]}
   />
 );

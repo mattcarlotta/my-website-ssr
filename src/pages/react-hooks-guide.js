@@ -2,7 +2,7 @@ import Page from "~components/Layout/Page";
 
 const ReactHooksGuide = () => (
   <Page
-    description="An educational website to help up-and-coming developers understand React’s newly introduced hooks. The entire website was built using hooks and provides: Interactive hook examples with example code and in-depth hook descriptions and usage cases."
+    description="An educational website to help up-and-coming developers understand React’s newly introduced hooks. The entire website was built using hooks and provides: Interactive hook examples with example code and in-depth hook descriptions and usage cases. Designed for both mobile to desktop screen sizes, and has a light and dark theme."
     head={{
       title: "React Hooks Guide",
       url: "/react-hooks-guide",
@@ -30,6 +30,16 @@ const ReactHooksGuide = () => (
         src: "reacthooksExamples",
         alt: "examples-preview",
         title: "Examples",
+      },
+      {
+        src: "reacthooksMobile",
+        alt: "mobile-preview",
+        title: "Mobile Screen",
+      },
+      {
+        src: "reacthooksPad",
+        alt: "pad-preview",
+        title: "Pad Screen",
       },
     ]}
     tech={[

@@ -1,4 +1,5 @@
 import { IconContext } from "react-icons";
+import { FaBlog } from "react-icons/fa";
 import { GoHome, GoMail } from "react-icons/go";
 import { FiLinkedin } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";
@@ -29,6 +30,12 @@ const FOOTERLINKS = [
     Icon: FiLinkedin,
     link: "https://www.linkedin.com/in/mattcarlotta/",
     description: "My LinkedIn profile",
+  },
+  {
+    dataTest: "blog",
+    Icon: FaBlog,
+    link: "https://mattcarlotta.blogspot.com",
+    description: "My personal blog",
   },
 ];
 

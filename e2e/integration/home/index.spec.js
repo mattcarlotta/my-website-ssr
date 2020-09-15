@@ -88,6 +88,10 @@ context("Home Page", () => {
     cy.get("[data-testid='linkedin']").should("have.attr", "target", "_blank");
   });
 
+  it("displays a link to open blogger", () => {
+    cy.get("[data-testid='blog']").should("have.attr", "target", "_blank");
+  });
+
   it("displays 12 project links", () => {
     cy.get("[data-testid='body']").find("a").should("have.length", 12);
   });

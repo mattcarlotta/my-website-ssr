@@ -32,11 +32,11 @@ context("React Hooks Guide Project Page", () => {
     cy.get("[data-testid='tech']").should("have.length", 1);
   });
 
-  it("displays the 3 project snapshot thumbnails", () => {
+  it("displays the 5 project snapshot thumbnails", () => {
     cy.get("[data-testid='snapshots']").should("have.length", 1);
     cy.get("[data-testid='snapshots']")
       .find("picture")
-      .should("have.length", 3);
+      .should("have.length", 5);
   });
 
   it("displays a modal for individual project snapshots", () => {
